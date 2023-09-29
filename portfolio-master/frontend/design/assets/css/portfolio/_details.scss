@@ -1,0 +1,64 @@
+.portfolio-full-details{
+    padding-left: $side_double_xl;
+    padding-right: $side_double_xl;
+    padding-top:50px;
+    padding-bottom:50px;
+}
+
+.fd-title{
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.fd-details{
+    padding:20px 0;
+    font-size: 20px;
+    line-height: 34px;
+}
+
+.fd-techs{
+    padding:20px 0;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    button{
+        width:50px;
+        height:50px;
+        margin-left: 10px;
+        margin-right: 10px;
+        border:0;
+        background-color: transparent;
+        transition: all 0.1s;
+        &:hover{
+            transform: scale(1.2);
+        }
+    }
+}
+
+.fd-functionality-list{
+    font-size: 20px;
+    margin-left: 20px;
+    li{
+        padding:10px 0;
+    }
+}
+
+@media screen and (max-width:767px){
+    .fd-title{
+        font-size: 24px;
+    }
+    .fd-details{
+        text-align: center;
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .fd-functionality-list{
+        font-size: 16px;
+        li{
+            padding:4px 0;
+        }
+    }
+}

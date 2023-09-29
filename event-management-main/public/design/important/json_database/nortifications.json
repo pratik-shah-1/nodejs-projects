@@ -1,0 +1,37 @@
+[{
+  "_id": {
+    "$oid": "60c16569c0e8411190daaa8c"
+  },
+  "event_manager": {
+    "$oid": "60c154e02b3cf70af81d7bde"
+  },
+  "message": "Testing Event, this event is removed by Admin",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c24a05ba5d2322d4191af0"
+  },
+  "student": {
+    "$oid": "60be38ae9bcd5229282949a2"
+  },
+  "message": "You are removed from PHP Workshop by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c24a9ad1f89f1654658fdc"
+  },
+  "student": {
+    "$oid": "60c06a38d271871fb87f768b"
+  },
+  "message": "You are removed from PHP Workshop by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c24bea5b58641684a17c71"
+  },
+  "student": {
+    "$oid": "60be37919bcd52292829499a"
+  },
+  "message": "You are removed from PHP Workshop by Event-Manager",
+  "__v": 0
+}]

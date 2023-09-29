@@ -1,0 +1,54 @@
+.home-s2{
+    // WE NEED 100% WIDTH BECAUSE OF BACKGROUD IS LIGHT
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    &::after{
+        content: "";
+        width:100vw;
+        height: 100%;
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        background-color: $light_bg;
+        z-index: -1;
+    }
+}
+
+.home-slider{
+    width:1000px;
+    height:500px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+    .swiper-slide img{
+        object-fit: contain;
+    }
+}
+
+.home-s2-portfolio-para{
+    width:590px;
+    p{
+        text-align: center;
+        color:$secondary;
+        &:nth-child(1){
+            font-size: 36px;
+            font-weight: 500;
+        }
+        &:nth-child(2){
+            line-height: 24px;
+            padding:18px 0;
+        }
+    }
+}
+
+.home-s2-portfolio-btns{   
+    display: flex;
+    button{
+        margin:0 12px;
+    }
+}

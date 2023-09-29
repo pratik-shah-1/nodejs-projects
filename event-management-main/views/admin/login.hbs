@@ -1,0 +1,37 @@
+<div class="m-auto rounded border login_form">
+	<p class="h5 bg-dark text-light text-center py-3 text-uppercase">Admin Login</p>
+	<form id="admin" class="px-4">
+		<p class="m-0 alert alert-danger h6 text-capitalize py-2 my-3 d-none error_msg"></p>
+		<input type="hidden" name="_token" value="{{_token}}">
+		<div class="form-group mb-2">
+			<label class="form-label m-0 h6">Username</label>
+			<input class="form-control" type="text"  name="username">
+		</div>
+		<div class="form-group mb-2">
+			<label class="form-label m-0 h6">Password</label>
+			<input class="form-control" type="password" name="password">
+		</div>
+		<button class="mt-2 mb-3 btn btn-primary w-100"><span class="h6">LOGIN</span></button>
+	</form>
+</div>
+
+<a href="/admin/events" hidden>admin_events</a>
+
+<script>
+	$('#admin').submit(function(e){
+		e.preventDefault();
+		$.ajax({
+			url : '/admin/login',
+			method : 'POST',
+			data : $(this).serialize(),
+			success : function(res){
+				if(res){
+					$('[href="/admin/events"]')[0].click();
+				}
+			},
+			error :function(xhr, status, error){
+				$('.error_msg').removeClass('d-none').text(xhr.responseJSON.message);
+			}
+		})
+	});
+</script>

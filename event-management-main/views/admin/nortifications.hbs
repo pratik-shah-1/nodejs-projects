@@ -1,0 +1,52 @@
+<div class="container mt-5">
+	<div class="row">
+		{{#each nortifications}}
+			<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+				<div class="position-relative shadow-sm rounded border my-3">
+					<p class="h6 pt-4 pb-2 bg-dark text-light text-center">{{this.email}}</p>
+					<p class="m-0 p-4 nortification overflow-auto" style="height:150px; line-height:24px;">
+						{{this.details}}
+					</p>
+					<button class="btn btn-sm btn-outline-danger border-0 position-absolute rounded" style="top:0; right:0;" onclick="remove_nortification(this,`{{this._id}}`)"><i class="fas fa-times"></i></button>
+				</div>
+			</div>
+		{{/each}}
+	</div>
+</div>
+
+{{#unless nortifications}}
+<p class="display-4 text-center mt-5">No Nortifications</p>
+{{/unless}}
+
+<input type="hidden" name="_token" value="{{_token}}">
+
+<script>
+	function remove_nortification(element, id){
+		const _token = $('[name="_token"]').val();
+		swal({
+		  	title: "Are you sure?",
+		  	icon: "warning",
+		  	buttons: true
+		})
+		.then((res)=>{
+			if(res){
+				$.ajax({
+					//nid is nortification id....
+					url : '/admin_nortification/'+id,
+					method : 'DELETE',
+					data : {_token},
+					success : function(res){
+						if(res){
+							element.parentElement.parentElement.outerHTML= ``;
+							swal('Nortification Removed Successfully...','','success');
+						}
+					},
+					error : function(xhr, status, error){
+						swal(xhr.responseJSON.message,'','warning');
+					}
+				});
+			}
+		});
+	}
+
+</script>

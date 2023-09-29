@@ -1,0 +1,46 @@
+<div class="d-flex flex-column flex-sm-row align-items-center justify-content-center justify-content-sm-end py-3">
+	<button class="btn btn-primary mb-3 mb-sm-0 mr-sm-5" onclick="excel()">
+		<span class="h6 m-0 text-uppercase">Export as Excel</span>
+	</button>
+	<input class="mr-sm-5 form-control" type="text" placeholder="Search by Event" name="filter" style="width:250px;">	
+</div>
+
+<script>
+	function excel(){
+	    $("#other_volunteers").table2excel({
+	        filename: "Other Volunteers.xls",
+	    });		
+	}
+</script>
+
+<div class="table-responsive">
+	<table class="table table-striped" id="other_volunteers">
+		<thead class="thead-dark">
+			<tr>
+				<th class="h6 text-uppercase">Index</th>
+				<th class="h6 text-uppercase">Volunteer Name</th>
+				<th class="h6 text-uppercase">Email Address</th>
+				<th class="h6 text-uppercase">Mobile Number</th>
+			</tr>
+		</thead>
+		<tbody>
+			{{#each volunteers}}
+			<tr>
+				<td class="h5 font-weight-normal">{{index @index}}</td>
+				<td class="h5 font-weight-normal">{{this.volunteer.name}}</td>
+				<td class="h5 font-weight-normal">{{this.volunteer.email}}</td>
+				<td class="h5 font-weight-normal">{{this.volunteer.mobile}}</td>
+			</tr>
+			{{/each}}
+		</tbody>
+	</table>
+</div>
+
+<script>
+	$('[name="filter"]').keyup(function(e){
+		var value = $(this).val().toLowerCase();
+	    $("tbody tr").filter(function() {
+	      	$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+	    });
+	});
+</script>

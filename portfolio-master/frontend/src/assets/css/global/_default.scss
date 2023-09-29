@@ -1,0 +1,30 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: $font_family;
+    scroll-behavior: smooth;
+}
+
+#root,
+body{
+    width:100%;
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    position: relative;
+}
+
+a{
+    text-decoration: none !important;
+}
+
+input, textarea, button{
+    outline:none;
+}
+
+button{
+    cursor: pointer;
+}

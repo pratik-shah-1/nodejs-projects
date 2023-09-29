@@ -1,0 +1,35 @@
+<div class="contact_form border rounded m-auto">
+	<p class="bg-dark text-light h5 text-center py-3">CONTACT ADMIN</p>
+	<form class="p-4" id="contact_form">
+		<p class="m-0 my-3 py-2 alert alert-danger h6 error_msg d-none text-capitalize"></p>
+		<input type="hidden" name="_token" value="{{_token}}">
+		<input class="form-control" type="email" name="email" placeholder="Email Address">
+		<textarea class="form-control mt-3" name="details" placeholder="Write Your Problem" required></textarea>
+		<button class="btn btn-warning w-100 mt-3"><span class="h6 m-0">SEND</span></button>
+		<p class="text-right h6 m-0 pt-3">
+			<span>Contact-Number</span>
+			<span>:</span>
+			<span>+916789054321</span>
+		</p>
+	</form>		
+</div>
+
+<script>
+	$('#contact_form').submit(function(e){
+		e.preventDefault();
+		$.ajax({
+			url : "/contact_admin",
+			method : 'POST',
+			data : $(this).serialize(),
+			success : function(res){
+				if(res){
+					$('#contact_form').trigger('reset');
+					swal('Your request post successfully.','','success');					
+				}
+			},
+			error : function(xhr, status, error){
+				$('.error_msg').removeClass('d-none').text(xhr.responseJSON.message);
+			}
+		});
+	});
+</script>

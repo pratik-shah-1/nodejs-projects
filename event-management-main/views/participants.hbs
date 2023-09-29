@@ -1,0 +1,274 @@
+{{#if participants}}
+	<div class="py-3 d-flex flex-column flex-sm-row justify-content-center justify-content-sm-end">
+		<button class="btn btn-primary mx-4 mb-3 mb-sm-0" onclick="excel()">
+			<span class="h6 m-0 text-uppercase">Export as Excel</span>
+		</button>
+		<div class="ml-4 order-sm-2 mr-5">
+			{{#if certificates}}
+				<button class="btn btn-secondary" onclick="no_certificates(this,`{{event}}`);"><span class="h6">NO CERTIFICATES</span></button>
+			{{else}}
+				<button class="btn btn-warning" onclick="certificates(this,`{{event}}`);"><span class="h6">CERTIFICATES</span></button>
+			{{/if}}
+		</div>
+		<div class="d-flex ml-4 mt-3 mt-sm-0">
+			<input class="form-control" style="width:250px;border-radius:4px 4px 4px 4px" type="text" name="filter"  placeholder="Search Student">	
+		</div>
+	</div>
+
+	<script>
+		function excel(){
+		    $("#participants").table2excel({
+		        filename: "Participants.xls",
+		    });		
+		}
+	</script>
+
+	<div class="table-responsive">
+		<table class="table table-striped" id="participants">
+			<thead class="thead-dark">
+				<tr>
+					<th class="h6 text-uppercase">Index</th>
+					<th class="h6 text-uppercase">Participant Name</th>
+					<th class="h6 text-uppercase">Email Address</th>
+					<th class="h6 text-uppercase">Mobile</th>
+					<th class="h6 text-uppercase">Payment</th>
+					<th class="h6 text-uppercase">Certificate</th>
+					<th class="h6 text-uppercase">Winner</th>
+					<th class="h6 text-uppercase">Action</th>
+				</tr>
+			</thead>
+			<tbody>
+			{{#each participants}}
+				<tr>
+					<td class="h5 font-weight-normal">{{index @index}}</td>
+					<td class="h5 font-weight-normal">{{this.student.name}}</td>
+					<td class="h5 font-weight-normal">{{this.student.email}}</td>
+					<td class="h5 font-weight-normal">{{this.student.mobile}}</td>
+					<td class="h5 font-weight-normal">{{this.payment}}</td>
+					<td class="h5 font-weight-normal">
+						{{#if this.certificate}}
+							<button class="btn btn-info" onclick="no_certificate(this,`{{this.event}}`,`{{this.student._id}}`)">
+								<i class="fas fa-trophy px-1"></i>
+								<span class="h6">YES</span>
+							</button>
+						{{else}}
+							<button class="btn btn-info" onclick="certificate(this,`{{this.event}}`,`{{this.student._id}}`);">
+								<i class="fas fa-trophy px-1"></i>
+								<span class="h6">NO</span>
+							</button>
+						{{/if}}
+					</td>
+					<td class="h5 font-weight-normal">
+						{{#if this.winner}}
+							<button class="btn btn-success" onclick="looser(this,`{{this.event}}`,`{{this.student._id}}`);">
+								<i class="fas fa-award px-1"></i>
+								<span class="h6">YES</span>
+							</button>
+						{{else}}
+							<button class="btn btn-success" onclick="winner(this,`{{this.event}}`,`{{this.student._id}}`);">
+								<i class="fas fa-award px-1"></i>
+								<span class="h6">NO</span>
+							</button>
+						{{/if}}
+					</td>
+					<td class="h5 font-weight-normal">
+						<button class="btn btn-danger" onclick="remove(this,`{{this.event}}`,`{{this.student._id}}`);">
+							<span class="h6">REMOVE</span>
+						</button>
+					</td>
+				</tr>
+			{{/each}}
+			</tbody>
+		</table>
+	</div>
+{{else}}
+	<p class="display-4 text-center mt-5">No one participated yet</p>
+{{/if}}
+
+<input type="hidden" name="_token" value="{{_token}}">
+
+<script>
+	// BE CAREFULL HERE PASSWORD IS ALSO COMING FIX IT SOON...
+	const participantsObj = `{{{json participants}}}`;
+
+	function certificates(btn, event){
+		const _token = $('[name="_token"]').val();
+		swal({
+			title: 'Are you Sure?',
+			icon: 'warning',
+			buttons: true
+		})
+		.then(function(res){
+			if(res){
+				$.ajax({
+					url : '/certificates/'+event,
+					method : 'PUT',
+					data : {_token},
+					success : function (res){
+						// const socket = io();
+						// socket.emit('certificates', [{event}]);				
+						btn.parentElement.innerHTML = `
+							<button class="btn btn-secondary" onclick="no_certificates(this,'${event}');">
+								<span class="h6">NO CERTIFICATES</span>
+							</button>`;
+						swal('Certificate to all Participants','','success')
+						.then(()=>{
+							window.location.reload();
+						});
+					},
+					error : function (xhr, status, error){
+						swal("Something went wrong",'','error');
+					}
+				});				
+			}
+		});
+	}
+
+	function no_certificates(btn, event){
+		const _token = $('[name="_token"]').val();
+		$.ajax({
+			url : '/no_certificates/'+event,
+			method : 'PUT',
+			data : {_token},
+			success : function (res){
+				// const socket = io();
+				// socket.emit('no_certificates', [{event}]);				
+				btn.parentElement.innerHTML = `
+					<button class="btn btn-warning" onclick="certificates(this,'${event}');">
+						<span class="h6">CERTIFICATES</span>
+					</button>`;
+				swal('No Certificates to all Participants','','success')
+				.then(()=>{
+					window.location.reload();
+				});
+
+			},
+			error : function (xhr, status, error){
+				swal("Something went wrong",'','error');
+			}
+		});
+	}
+
+	function winner(btn, event, id){
+		const _token = $('[name="_token"]').val();
+		$.ajax({
+			url : '/winner/'+event+"/"+id,
+			method : 'PUT',
+			data : {_token},
+			success : function (res){
+				btn.parentElement.innerHTML	= `
+					<button class="btn btn-success" onclick="looser(this,'${event}','${id}')">
+						<i class="fas fa-award px-1"></i>
+						<span class="h6">YES</span>
+					</button>`;
+				swal('Participant declared as Winner','','success');			
+			},
+			error : function (xhr, status, error){
+				swal("Something went wrong",'','error');
+			}
+		});
+	}
+
+	// by defult all are looser...
+	function looser(btn, event, id){
+		const _token = $('[name="_token"]').val();
+		$.ajax({
+			url : '/looser/'+event+"/"+id,
+			method : 'PUT',
+			data : {_token},
+			success : function (res){
+				// const socket = io();
+				// socket.emit('looser', [{event, student:id}]);				
+				btn.parentElement.innerHTML	= `
+					<button class="btn btn-success" onclick="winner(this,'${event}','${id}')">
+						<i class="fas fa-award px-1"></i>
+						<span class="h6">NO</span>
+					</button>`;
+				swal('Participant declared as looser','','success');
+			},
+			error : function (xhr, status, error){
+				swal("Something went wrong",'','error');
+			}
+		});
+	}
+
+	function certificate(btn, event, id){
+		const _token = $('[name="_token"]').val();
+		$.ajax({
+			url : '/certificate/'+event+"/"+id,
+			method : 'PUT',
+			data : {_token},
+			success : function (res){
+				// const socket = io();
+				// socket.emit('certificate', [{event, student:id}]);				
+				btn.parentElement.innerHTML = `
+					<button class="btn btn-info" onclick="no_certificate(this,'${event}','${id}')">
+						<i class="fas fa-trophy px-1"></i>
+						<span class="h6">YES</span>
+					</button>`;
+				swal('Certificate provide to participant','','success');
+			},
+			error : function (xhr, status, error){
+				swal("Something went wrong",'','error');
+			}
+		});
+	}
+
+	function no_certificate(btn, event, id){
+		const _token = $('[name="_token"]').val();
+		$.ajax({
+			url : '/no_certificate/'+event+"/"+id,
+			method : 'PUT',
+			data : {_token},
+			success : function (res){
+				// const socket = io();
+				// socket.emit('no_certificate', [{event, student:id}]);				
+				btn.parentElement.innerHTML = `
+					<button class="btn btn-info" onclick="certificate(this,'${event}','${id}')">
+						<i class="fas fa-trophy px-1"></i>
+						<span class="h6">NO</span>
+					</button>`;
+				swal('Not provide certificate to participant','','success');
+			},
+			error : function (xhr, status, error){
+				swal("Something went wrong",'','error');
+			}
+		});
+	}
+
+
+	function remove(btn, event, id){
+		const _token = $('[name="_token"]').val();
+		swal({
+		  	title: "Are you sure?",
+		  	icon: "warning",
+		  	buttons: true
+		})
+		.then((res)=>{
+			if(res){
+				$.ajax({
+					url : '/participant/'+event+'/'+id,
+					method : 'DELETE',
+					data : {_token,event},
+					success : function(res){		
+						// button < td < tr.outerHTML
+						btn.parentElement.parentElement.outerHTML = ``;
+						swal('Participant removed successfully...','','success');	
+					},
+					error : function(xhr, status, error){
+						swal("Something went wrong",'','error');
+					}
+				});			
+			}
+		});
+	}
+
+	$('[name="filter"]').keyup(function(){
+		var value = $(this).val().toLowerCase();
+	    $("tbody tr").filter(function() {
+	      	$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+	    });
+	});
+
+
+</script>

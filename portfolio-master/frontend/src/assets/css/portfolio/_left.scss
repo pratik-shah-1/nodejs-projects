@@ -1,0 +1,46 @@
+// -------------------PORTFOLIO-LEFT-------------------
+.portfolio-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.portfolio-title{
+    font-size: 32px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    a{
+        margin-top: 10px;
+        color:$primary;
+        font-weight: normal;
+        font-size: 16px;
+    }
+}
+
+.portfolio-details{// ONLY 284 CHARACTER AVAILABLE...
+    margin:32px 0 20px;
+    width:480px;
+    color:$secondary;
+    font-size: 20px;
+    line-height: 34px;
+}
+
+.portfolio-techs{
+    width:100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    button{
+        width:50px;
+        height:50px;
+        margin-right: 10px;
+        border:0;
+        background-color: transparent;
+        transition: all 0.1s;
+        &:hover{
+            transform: scale(1.2);
+        }
+    }
+}
+

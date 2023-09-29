@@ -1,0 +1,28 @@
+[{
+  "_id": {
+    "$oid": "60bb1cf573597622109f5c1b"
+  },
+  "name": "Keshav Acharya",
+  "email": "keshav@gmail.com",
+  "mobile": 7890654321,
+  "password": "$2a$10$uJRw0SUctWa.52HGd9TB/ueTr4dwlObRVrdX3U6E9kUI14zHCAeMK",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60bb1e2785835322800c65f5"
+  },
+  "name": "Suraj Yadav",
+  "email": "suraj@gmail.com",
+  "mobile": 7809654321,
+  "password": "$2a$10$G3SSYLoia/0mgeKC4ytBx.w6qjIdsODefXBT1y/CJANK0B.aOpWsG",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60bb1e4985835322800c65f6"
+  },
+  "name": "Yas Patel",
+  "email": "yas@gmail.com",
+  "mobile": 7980654321,
+  "password": "$2a$10$.WlNHRbMKrfuSq3dKn/FKOqQOJhvhtSVSdBkN0nBbEeVlyPUILHB6",
+  "__v": 0
+}]

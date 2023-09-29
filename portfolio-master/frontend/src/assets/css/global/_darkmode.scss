@@ -1,0 +1,51 @@
+.dark-bg{
+    background-color: $dark_bg !important;
+    &::after{
+        background-color: $dark_bg !important;
+        border-top:0.5px solid $dark_border !important;
+        border-bottom:0.5px solid $dark_border !important;
+    }
+}
+
+.portfolio-dark-border{
+    &:nth-child(even){
+        border-top:0.5px solid $dark_border !important;
+        border-bottom:0.5px solid $dark_border !important;    
+    }
+}
+
+.light-text{
+    color: white !important;
+}
+
+.gray-text{
+    color: $paragraph !important;
+}
+
+.dark-border{
+    border:0.5px solid $dark_border !important;
+}
+
+.light-github-outline-btn{
+    border:2px solid white !important;
+    i, span{
+        color:white !important;
+    }
+    &:hover{
+        background-color: white !important;
+        border:2px solid white !important;
+        i, span{
+            color:$secondary !important;
+        }    
+    }
+}
+
+// --------------------SLIDER-PAGINATION----------------
+.swiper-pagination-light{
+    .swiper-pagination-bullet{
+        background-color: white !important;
+    }    
+    .swiper-pagination-bullet-active{
+        background-color: $primary;
+    }    
+}

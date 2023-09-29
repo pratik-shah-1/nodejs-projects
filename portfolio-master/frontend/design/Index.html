@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Pratik Jadav</title>
+	<link rel="icon" href="./assets/img/favicon/favicon.png" type="image/x-icon">
+	<link rel="stylesheet" href="./assets/css/index.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fontisto@v3.0.4/css/fontisto/fontisto.min.css">
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+</head>
+<body>
+
+	<!-- ----------SCROLL-UP-BTN---------- -->
+	<button class="scroll-up-btn" title="Scroll Up"><i class="fas fa-angle-up"></i></button>
+
+	<!-- ----------DARK-MODE---------- -->
+	<button class="dark-mode-btn spin-animation" title="Switch to Dark Mode"><span class="material-icons">light_mode</span></button>
+
+	<!-- ----------NAVBAR---------- -->
+	<nav class="website-navbar">
+		<div class="logo">
+			<a href="/">Pratik Jadav</a>
+		</div>
+		<div class="nav-menu">
+			<a class="navbar-active-link" href="./index.html">Home</a>
+			<a href="./portfolio.html">Portfolio</a>
+			<a href="./contact.html">Contact</a>
+			<a class="rounded-btn" href="./assets/resume.pdf" target="_blank">Resume</a>
+		</div>
+	</nav>
+	
+	<!-- ----------SECTION-1---------- -->
+	<div class="home-s1">
+		<!-- HOME-MAIN -->
+		<div class="home-s1-main">
+			<!-- LEFT -->
+			<div class="home-s1-main-left">
+				<p class="hi-i-am">Hi, I am</p>
+				<span class="animate-text"></span>
+				<p class="my-intro">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure voluptatibus numquam eos dolorem maiores repellendus obcaecati veniam tempora similique aperiam.</p>
+				<a class="rounded-btn" style="width:150px" href="">View Portfolio</a>
+			</div>
+			<!-- RIGHT -->
+			<div class="home-s1-main-right">				
+				<div>
+					<model-viewer src="assets/img/avatar/avatar.glb" camera-controls autoplay camera-target="0m 0.98m 0m" bounds="tight"></model-viewer>
+				</div>
+			</div>
+		</div>
+		
+		<!-- PARALLEX-ICONS -->
+		<div class="home-s1-bg-icons">
+			<img src="./assets/img/parallex/code.png" class="parallex" data-speed="-0.2" alt="">
+			<img src="./assets/img/parallex/database.png" class="parallex" data-speed="0.3" alt="">
+			<img src="./assets/img/parallex/cloud.png" class="parallex" data-speed="-0.4" alt="">
+			<img src="./assets/img/parallex/cloud.png" class="parallex" data-speed="-0.5" alt="">
+			<img src="./assets/img/parallex/code.png" class="parallex" data-speed="-0.6" alt="">
+		</div>
+	</div><!-- END-SECTION-1 -->
+
+	<!-- ----------SECTION-2---------- -->
+	<div class="home-s2">
+		<!-- ----------LAPTOP---------- -->
+		<div class="home-slider">
+			<div class="swiper my-swiper">
+				<!-- IMAGE-CONTAINER -->
+				<div class="swiper-wrapper">
+					<div class="swiper-slide"><img src="./upload/portfolio/typing/typing.png" alt=""></div>
+					<div class="swiper-slide"><img src="./upload/portfolio/gaurav/contact.png" alt=""></div>
+					<div class="swiper-slide"><img src="./upload/portfolio/typing/clock.png" alt=""></div>
+				</div>
+				<!-- SLIDER-PAGINATION -->
+				<div class="swiper-pagination"></div>
+				<!-- PREV, NEXT BUTTONS -->
+				<button class="swiper-prev-btn"><i class="fas fa-chevron-circle-left"></i></button>
+				<button class="swiper-next-btn"><i class="fas fa-chevron-circle-right"></i></button>
+			</div><!-- END-SWIPER -->
+		</div><!-- END-HOME-SLIDER -->
+		<!-- PORTFOLIO-INTRODUCTION -->
+		<div class="home-s2-portfolio-para">
+			<p>Gaming Portfolio Website</p>
+			<p>Lorem Ipsum not dolar Lorem Ipsum not dolar Lorem Ipsum not dolar Lorem Ipsum not dolar Lorem Ipsum not dolarLorem Ipsum not dolarLorem </p>	
+		</div>
+		<!-- PORTFOLIO-BUTTONS -->
+		<div class="home-s2-portfolio-btns">
+			<button class="github-outline-btn"><i class="fab fa-github"></i><span>Github</span></button>
+			<button class="rounded-btn">Visit Site<i class="fas fa-arrow-right"></i></button>
+		</div><!-- END-PORTFOLIO-BUTTONS -->
+	</div><!-- END-HOME-S2 -->
+
+	<!-- ----------CONTACT-SECTION---------- -->
+	<div class="contact-section">
+
+		<!-- PARALLEX-ICONS-OF-SECTION-3 -->
+		<div class="contact-section-bg-icons">
+			<img src="./assets/img/parallex/contact.png" alt="">
+			<img src="./assets/img/parallex/user.png" alt="">
+			<img src="./assets/img/parallex/envelope.png" alt="">
+			<img src="./assets/img/parallex/message.png" alt="">
+			<img src="./assets/img/parallex/user.png" alt="">
+		</div>
+		
+		<!-- CONTACT-FORM -->
+		<form class="contact-form" action="">
+			<p class="contact-form-title">Get in Touch</p>
+			<div>
+				<div>
+					<label class="contact-form-label">Name</label>
+					<input class="contact-form-input" type="text">	
+				</div>
+				<div>
+					<label class="contact-form-label">Email</label>
+					<input class="contact-form-input" type="text">	
+				</div>
+			</div>
+			<div>
+				<label class="contact-form-label">Message</label>
+				<textarea class="contact-form-input" name=""></textarea>
+			</div>
+			<div>
+				<button class="rounded-btn">Send</button>
+			</div>
+		</form>
+
+		<!-- SOCIAL-MEDIA-LINKS -->
+		<div class="social-media-links">
+			<div>
+				<img src="./assets/img/social_media/mail.png" alt="">
+				<a href="" mailto="pratikjadav29@gmail.com" target="_blank">pratikjadav29@gmail.com</a>
+			</div>
+			<div>
+				<img src="./assets/img/social_media/git.png" alt="">
+				<a href="https://github.com/jadavpratik" target="_blank">jadavpratik</a>
+			</div>
+			<div>
+				<img src="./assets/img/social_media/linkedin.png" alt="">
+				<a href="https://www.linkedin.com/in/jadavpratik/" target="_blank">jadavpratik</a>
+			</div>
+			<div>
+				<img src="./assets/img/social_media/skype.png" alt="">
+				<a href="" target="_blank">live:.cid.223d96c142d1ae07</a>
+			</div>
+		</div><!-- END-SOCIAL-MEDIA-LINKS -->
+	</div><!-- END-CONTACT-SECTION -->
+
+
+	<!------------FOOTER------------>
+	<footer>
+		<p>©2022 Developed by Pratik Jadav | Designed by <a href="https://gauravbarai01.000webhostapp.com/" target="_blank">Gaurav Barai</a></p>	
+	</footer>
+
+	<!-- JS-FILES -->
+	<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>	
+	<script src="./assets/js/darkMode.js"></script>
+	<script src="./assets/js/index.js"></script>
+
+</body>
+</html>

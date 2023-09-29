@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Event Festival</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+	<link rel="stylesheet" href="../assets/css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg px-4 px-sm-5 shadow-sm">
+	<a class="navbar-brand" href="#"><span class="h5 text-dark">EVENT FESTIVAL</span></a>
+  	<button class="ml-auto navbar-toggler" type="button" data-toggle="collapse" data-target="#navmenu">
+		<i class="fas fa-bars"></i>	  	
+	</button>
+	<div class="collapse navbar-collapse" id="navmenu">
+	    <ul class="navbar-nav ml-auto">
+	      	<li class="nav-item active"><a class="nav-link h6 text-dark" href="your_events.html">YOUR EVENTS</a></li>
+	      	<li class="nav-item active"><a class="nav-link h6 text-dark" href="login.html">LOGIN</a></li>
+	      	<li class="nav-item active"><a class="nav-link h6 text-dark" href="#">LOGOUT</a></li>
+	    </ul>
+  	</div>		
+</nav>
+
+<div class="m-auto rounded border signup_form">
+	<p class="h5 bg-dark text-light text-center py-3 text-uppercase">Registration Form</p>
+	<form action="/signup" id="signup" method="POST" class="px-4">
+		<div class="form-group mb-3">
+			<label class="m-0 h6">Role</label>
+			<select class="custom-select" name="role" id="">
+				<option value="">Event Manager</option>
+				<option value="">Volunteer</option>
+				<option value="">Student (as Participant)</option>
+			</select>
+		</div>
+		<div class="form-group mb-3">
+			<label class="m-0 h6">Full Name</label>
+			<input class="form-control" type="text" name="name">
+			<p class="small py-1 d-none name_error_msg"></p>
+		</div>
+		<div class="form-group mb-3">
+			<label class="m-0 h6">Email Address</label>
+			<input class="form-control" type="text" name="email">
+			<p class="small py-1 d-none email_error_msg"></p>
+		</div>
+		<div class="form-group mb-3">
+			<label class="m-0 h6">Password</label>
+			<input class="form-control" type="password" name="pswd">
+			<p class="small py-1 d-none pswd_error_msg"></p>
+		</div>
+		<div class="form-group mb-3">
+			<label class="m-0 h6">Confirm Password</label>
+			<input class="form-control" type="password" name="cpswd">
+			<p class="small py-1 d-none cpswd_error_msg"></p>
+		</div>
+		<div class="form-group d-flex align-items-center mb-3">
+			<input type="checkbox" name="tc">
+			<label class="m-0 mx-2">Agree with Term & Conditon?</label>
+		</div>
+		<button class="btn btn-warning w-100"><span class="h6">REGISTRATION</span></button>
+		<p class='mt-3 text-center'>Already Account? <a href="login.html">Login</a></p>
+	</form>
+</div>
+
+<footer class="bg-dark py-3 d-flex flex-column">
+	<a class="m-0 h6 text-warning py-2 text-center" href="/contact">Contact-Admin</a>
+	<p class="m-0 h6 text-light py-2 text-center ">Copyright &#169; 2021 Event Festival </p>
+</footer>
+
+</body>
+</html>

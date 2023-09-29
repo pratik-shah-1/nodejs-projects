@@ -1,0 +1,207 @@
+<form class="border rounded m-auto add_event" enctype="multipart/form-data" id="add_event">
+	<p class="m-0 h5 bg-dark text-light text-center py-3">ADD EVENT</p>
+	<input type="hidden" name="_token" value="{{_token}}">
+	{{!--  Part-1  --}}
+	<div class="part_1 p-4">
+		<p class="m-0 mb-2 py-2 alert alert-danger h6 error_msg1 d-none text-capitalize"></p>
+		<div class="form-group">
+			<label class="h6">Event Name <span class="text-danger">*</span></label>
+			<input type="text" class="form-control" name="name">
+		</div>				
+		<script>
+			$('[name="name"]').keyup(function(){
+				const name = $(this).val();
+				console.log(name);
+				$.ajax({
+					url : 'check_event_name/'+name,
+					method : 'GET',
+					success : function(res){
+						if(res.message==='ok'){
+							$('.error_msg1').addClass('d-none').text('');
+						}
+						else{
+							$('.error_msg1')
+							.removeClass('d-none alert-danger')
+							.addClass('alert-warning')
+							.text(res.message);	
+						}
+					},
+					error : function(xhr, status, error){
+						$('.error_msg1')
+						.removeClass('d-none alert-warning')
+						.addClass('alert-danger')
+						.text(xhr.responseJSON.message);	
+					}
+				});
+			});
+		</script>
+		<div class="form-group">
+			<label class="h6">Category <span class="text-danger">*</span></label>
+			<select class="custom-select" name="category">
+				{{#each event_categories}}
+					<option value="{{this.name}}">{{this.name}}</option>
+				{{/each}}
+			</select>
+		</div>
+		<div class="form-group">
+			<label class="h6" for="">Details <span class="text-danger">*</span></label>
+			<textarea name="details" class="form-control" name="details"></textarea>
+		</div>
+		<div class="form-group">
+			<div class="custom-file">
+				<label class="custom-file-label" for="img">Upload Image</label>
+				<input class="custom-file-input" type="file" id="image" name="image" accept="image/*">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="h6" for="">Certificate Provied? <span class="text-danger">*</span></label>
+			<div class="d-flex justify-content-between" style="width:120px;">
+				<div class="form-check">
+				  	<input class="form-check-input" type="radio" name="certificate" value="true">
+				  	<label class="form-check-label">Yes</label>
+				</div>			
+				<div class="form-check">
+				  	<input class="form-check-input" type="radio" name="certificate" value="false" checked>
+				  	<label class="form-check-label">No</label>
+				</div>								
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="h6" for="">Winner Prize? <span class="text-danger">*</span></label>
+			<div class="d-flex justify-content-between" style="width:120px;">
+				<div class="form-check">
+				  	<input class="form-check-input" type="radio" name="winner" value="true">
+				  	<label class="form-check-label">Yes</label>
+				</div>			
+				<div class="form-check">
+				  	<input class="form-check-input" type="radio" value="false" name="winner" checked>
+				  	<label class="form-check-label">No</label>
+				</div>								
+			</div>
+		</div>
+		<div class="form-group">
+			<div>
+				<label class="h6" for="">Type <span class="text-danger">*</span></label>
+				<select name="type" class="custom-select" onchange="event_type(this.value);">
+					<option value="free" selected>FREE</option>
+					<option value="paid" >PAID</option>
+				</select>
+				<input type="text" placeholder="Amount in Rupees"  class="event_amount form-control mt-3 d-none" name="amount" value="0">
+			</div>
+		</div>				
+		<div class="d-flex justify-content-end">
+			<button class="btn btn-warning next_btn"><span class="h6">Next</span></button>
+		</div>
+	</div>{{!-- <!-- End of Part-1 --> --}}
+	
+	<script>
+
+		$('.next_btn').click(function(e){
+			e.preventDefault();
+			if($('[name="name"]').val()=="" || $('[name="details"]').val()==""){
+				$('.error_msg1').removeClass('d-none').text('Please Compelete this section');
+				window.scrollTo(0, 0);
+			}
+			else{
+				$('.part_1').addClass('d-none');
+				$('.part_2').removeClass('d-none');				
+			}
+		});
+		
+		function event_type(val){
+			if(val=='paid')
+				$('.event_amount').removeClass('d-none');
+			else{
+				$('[name="amount"]').val(0);
+				$('.event_amount').addClass('d-none');
+			}
+		}
+	</script>
+	
+	{{!-- <!-- Part-2 --> --}}
+	<div class="part_2 d-none p-4">
+		<p class="m-0 mb-3 py-2 alert alert-danger h6 error_msg2 d-none text-capitalize"></p>
+		<div class="form-group">
+			<label class="h6">Start-Time <span class="text-danger">*</span></label>
+			<input type="time" class="form-control" name="start_time">
+		</div>				
+		<div class="form-group">
+			<label class="h6">End-Time <span class="text-danger">*</span></label>
+			<input type="time" class="form-control" name="end_time">
+		</div>				
+		<div class="form-group">
+			<label class="h6">Start-Date <span class="text-danger">*</span></label>
+			<input type="date" class="form-control" name="start_date" onchange="data_validation();">
+		</div>				
+		<div class="form-group">
+			<label class="h6">End-Date <span class="text-danger">*</span></label>
+			<input type="date" class="form-control" name="end_date">
+		</div>				
+		<div class="form-group">
+			<label class="h6">Location/Plateform <span class="text-danger">*</span></label>
+			<input type="text" class="form-control" name="location">
+		</div>							
+		<div class="form-group">
+			<label class="h6">Capacity <span class="text-danger">*</span></label>
+			<input type="text" class="form-control" name="capacity">
+		</div>		
+		<div class="form-group">
+			<label class="h6">Contact <span class="text-danger">*</span></label>
+			<input type="text" class="form-control mb-3" name="person_name" placeholder="Name" value="{{person.name}}">
+			<input type="text" class="form-control" name="person_mobile" placeholder="Mobile Number" value="{{person.mobile}}">
+		</div>							
+		<div class="d-flex justify-content-between">
+			<button class="btn btn-outline-warning prev_btn">
+				<span class="h6">Prev</span>
+			</button>
+			<button class="btn btn-warning">
+				<span class="h6">SUBMIT</span>
+			</button>
+		</div>
+	</div>{{!-- <!-- End of Part-2 --> --}}
+</form>
+
+<script>
+
+	$('.prev_btn').click(function(e){
+		e.preventDefault();
+		$('.part_2').addClass('d-none');
+		$('.part_1').removeClass('d-none');
+	});
+
+
+	$('#add_event').submit(function(e){
+		e.preventDefault();
+		const add_event_from = $(this)[0];
+		const form = new FormData(add_event_from);
+		$.ajax({
+			url : '/event',
+			method : 'POST',
+			data : form,
+			processData : false,
+			contentType : false,
+			success : function(res){
+				swal('Event Added Successfully...','','success');
+				$(this).trigger('reset');
+			},
+			error : function(xhr, status, error){
+				$('.error_msg2').removeClass('d-none').text(xhr.responseJSON.message);
+				window.scrollTo(0,0);
+			}
+		});
+	});
+
+	// START DATE VALIDATION...
+	(()=>{
+		const today = moment().format('YYYY-MM-DD');
+		$('[name="start_date"]').attr('min',today);		
+	})();
+
+	// ALL END DATES ARE AFTER START OR EQUAL START DATE...
+	function data_validation(){
+		$('[name="end_date"]').attr('min', $('[name="start_date"]').val() );
+	}
+
+
+</script>
+

@@ -1,0 +1,145 @@
+[{
+  "_id": {
+    "$oid": "60be37919bcd52292829499a"
+  },
+  "name": "Dhruv Chaudhri",
+  "email": "dhruv@gmail.com",
+  "mobile": 9876543202,
+  "password": "$2a$10$0PR9hoiT9bZ4du/MbW4uyux7qzp1y1vX7KsAvFXA.YzUZdgu9AzKu",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60be37a69bcd52292829499b"
+  },
+  "name": "Dhruv Chauhan",
+  "email": "dc@gmail.com",
+  "mobile": 9876543204,
+  "password": "$2a$10$NzMFFeNKD0KPePiJKMW5ieJ6EiNAzQSicilAZY7cDmOjxqnALZ6f6",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60be37e19bcd52292829499c"
+  },
+  "name": "Vishwa Chhatra",
+  "email": "vishwa@gmail.com",
+  "mobile": 9876543205,
+  "password": "$2a$10$nmZ4XlHFRJzl4bTZI5n5xuv9yjrazcROIVPeddQBnpPTtVXQNEU3q",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60be37f69bcd52292829499d"
+  },
+  "name": "Manoj Damor",
+  "email": "manoj@gmail.com",
+  "mobile": 9876543206,
+  "password": "$2a$10$y7avSDh4YlE2fvFMAOae1.SrmQ8jwZwFyGsEQbtZmCTzfFMQLTylq",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60be381f9bcd52292829499e"
+  },
+  "name": "Parth Darji",
+  "email": "parth@gmail.com",
+  "mobile": 9876543207,
+  "password": "$2a$10$cKBKruZV2I0kZPD0wW9bYupuE/30UrRpLfvF8A5wEV0wno7rbShfK",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60be38429bcd52292829499f"
+  },
+  "name": "Harsh Gaudani",
+  "email": "delllappy1212@gmail.com",
+  "mobile": 9876543208,
+  "password": "$2a$10$T2jq9I4FsK1xG3loV.3rseV4V5pYNy2afuHCiZmN4jGLcPrrBRACG",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60be38639bcd5229282949a0"
+  },
+  "name": "Dhruv Gohil",
+  "email": "dhruvg@gmail.com",
+  "mobile": 9876543209,
+  "password": "$2a$10$R1k332v6vc63la20TxjNVOEnR/U7s9jKQF/8TRTSdDyK6FGAaxYcm",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60be387b9bcd5229282949a1"
+  },
+  "name": "Mamta Hadiya",
+  "email": "mamta@gmail.com",
+  "mobile": 9876543210,
+  "password": "$2a$10$WaW3XLUQxtZdUGVeEkw5k.N.vjxQIlx5Cdm1xhJbYjqsMR1yrRRVO",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60be38ae9bcd5229282949a2"
+  },
+  "name": "Pratik Jadav",
+  "email": "pratikjadav29@gmail.com",
+  "mobile": 9876543237,
+  "password": "$2a$10$T7P.YIAXisTLZErQYoHVROCRttO/C8XnfhILka2R/vtAUDbALfPTS",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60be38cf9bcd5229282949a3"
+  },
+  "name": "Pruthviraj Jadeja",
+  "email": "pruthvi@gmail.com",
+  "mobile": 9876543212,
+  "password": "$2a$10$/pU7pKI8lbBc9xozy1zaM.MILe7X9hfdx.CnPgKqHX8mokEOtx7ge",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60be38e59bcd5229282949a4"
+  },
+  "name": "Vatsal Jain",
+  "email": "vatsal@gmail.com",
+  "mobile": 9876543213,
+  "password": "$2a$10$/JZ1ifVrLLGJAEDKTbpFOeKdNJ9eyKHz.jNX5/uowMOd0lYLFkBxW",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60be38fe9bcd5229282949a5"
+  },
+  "name": "Hardik Jamnal",
+  "email": "hardik@gmail.com",
+  "mobile": 9876543214,
+  "password": "$2a$10$qYTfcWelvuG6BQVwOu5rzOUaneYbJemWx6PFFKJsA8poq4oE1DeaG",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60be39209bcd5229282949a7"
+  },
+  "name": "Alis Jodhani",
+  "email": "alis@gmail.com",
+  "mobile": 9876543215,
+  "password": "$2a$10$.QJr9S1YtxKuZMVAODSpYOS.uQjNA5EF9y6E42HjgN1rpq/zu4r8O",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60bfaddcdce47e22a0fcef2a"
+  },
+  "name": "Urja Patel",
+  "email": "urja@gmail.com",
+  "mobile": 9876543200,
+  "password": "$2a$10$Y1GuFxO9rVSOlPeMpJUNuODjFWnia8/s/BNYJrsr/O4QzEnjWu.Fe",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c06a38d271871fb87f768b"
+  },
+  "name": "Gaurav Barai",
+  "email": "gaurav@gmail.com",
+  "mobile": 9876543201,
+  "password": "$2a$10$dLJCbIQyc8A2z/tkwbLzmO0DVRg9Ch3WQwJsv0/KslHk2cHaFHhhK",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c23fc8c4b2251dc4de7e40"
+  },
+  "name": "Damor Umang",
+  "email": "umang@gmail.com",
+  "mobile": 9876543101,
+  "password": "$2a$10$eo/bhicDT.e.g2uaOidkmeIBJ3IHyxlUpY6b.UonDRKItKVU4K3La",
+  "__v": 0
+}]

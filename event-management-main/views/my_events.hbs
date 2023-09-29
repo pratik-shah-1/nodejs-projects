@@ -1,0 +1,113 @@
+{{#if events}}
+	<div class="d-flex flex-column flex-sm-row align-items-center justify-content-center justify-content-sm-end py-3">
+		<button class="btn btn-primary mb-3 mb-sm-0 mr-sm-5" onclick="excel()">
+			<span class="h6 m-0 text-uppercase">Export as Excel</span>
+		</button>
+		<input class="mr-sm-5 form-control" type="text" placeholder="Search by Event" name="filter" style="width:250px;">	
+	</div>
+
+	<script>
+		function excel(){
+		    $("#my_events").table2excel({
+		        filename: "My Events.xls",
+		    });		
+		}
+	</script>
+
+	<div class="table-responsive">
+		<table class="table table-striped" id="my_events">
+			<thead class="thead-dark">
+				<tr>
+					<th class="h6 text-uppercase">Index</th>
+					<th class="h6 text-uppercase">Event Name</th>
+					<th class="h6 text-uppercase">Volunteers</th>
+					<th class="h6 text-uppercase">Participants</th>
+					<th class="h6 text-uppercase">Feedbacks</th>
+					<th class="h6 text-uppercase">Time</th>
+					<th class="h6 text-uppercase">Start Date</th>
+					<th class="h6 text-uppercase">End Date</th>
+					<th class="h6 text-uppercase">Action</th>
+				</tr>
+			</thead>
+			<tbody>
+			{{#each events}}
+				<tr>
+					<td class="h5 font-weight-normal">{{index @index}}</td>
+					<td class="h5 font-weight-normal text-capitalize">
+						<p class="text-truncate" style="width:200px !important;" title="{{this.name}}">{{this.name}}</p>
+					</td>
+					<td class="h5 font-weight-normal">
+						<a href="/my_events/{{this.slug}}/volunteers" class="btn btn-sm btn-warning">
+							<span class="h6">{{this.volunteers}}</span>
+						</a>
+					</td>
+					<td class="h5 font-weight-normal">
+						<a href="/my_events/{{this.slug}}/participants" class="btn btn-sm btn-primary">
+							<span class="h6">{{this.participants}}</span>
+						</a>
+					</td>
+					<td class="h5 font-weight-normal">
+						<a href="/my_events/{{this.slug}}/feedbacks" class="btn btn-sm btn-secondary">
+							<span class="h6">{{this.feedbacks}}</span>
+						</a>
+					</td>
+					<td class="h5 font-weight-normal">{{this.start_time}} - {{this.end_time}}</td>
+					<td class="h5 font-weight-normal">{{this.start_date}}</td>
+					<td class="h5 font-weight-normal">{{this.end_date}}</td>
+					<td class="h5 font-weight-normal">
+						<a href="/event/{{this.slug}}" class="btn btn-sm btn-success">
+							<span class="h6">VIEW</span>
+						</a>
+						{{#if this.cancel}}
+							<button class="btn btn-sm btn-danger mx-3" disabled>
+								<span class="h6">CANCELED</span>
+							</button>
+						{{else}}
+							<button class="btn btn-sm btn-outline-danger mx-3" onclick="cancel_event(this,`{{this._id}}`);">
+								<span class="h6">CANCEL</span>
+							</button>
+						{{/if}}
+						<a href="/update_event/{{this.slug}}"class="btn btn-sm btn-primary">
+							<span class="h6">UPDATE</span>
+						</a>
+					</td>
+				</tr>
+			{{/each}}
+			</tbody>
+		</table>
+	</div>
+{{else}}
+	<p class="my-5 py-5 text-center display-4">You haven't any event</p>
+{{/if}}
+
+
+<script>
+	
+	function cancel_event(element, event_id){
+		swal({
+			title:'Are you Sure?',
+			icon:'warning',
+			buttons:true
+		})
+		.then((ress)=>{
+			if(ress){
+				$.ajax({
+					url : '/event_cancel/'+event_id,
+					method : 'PUT',
+					success : function(res){
+						element.outerHTML = `							
+						<button class="btn btn-sm btn-danger mx-3" disabled>
+							<span class="h6">CANCELED</span>
+						</button>`;
+						swal('Event is Cancel by You','','success');
+					},
+					error : function(xhr, status, error){
+						swal(xhr.responseJSON.message,'','error');
+					}
+				});				
+			}
+		});
+	}
+	
+</script>
+

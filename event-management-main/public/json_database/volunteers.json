@@ -1,0 +1,157 @@
+[{
+  "_id": {
+    "$oid": "60be39529bcd5229282949a8"
+  },
+  "name": "Anshu Joshi",
+  "email": "anshu@gmail.com",
+  "mobile": 9876543216,
+  "password": "$2a$10$1E0orPvntlkq8uLGsrNHkOAHmdLN3EwZMLqGD7tq1ZwqCRj7LzZZm",
+  "__v": 0,
+  "block": false
+},{
+  "_id": {
+    "$oid": "60be39729bcd5229282949a9"
+  },
+  "name": "Rutanshi Khambhatiya",
+  "email": "rutanshi@gmail.com",
+  "mobile": 9876543217,
+  "password": "$2a$10$wqy1K/SsE1lok/hILO3ISOc9Unk0u2TgF.pAAv5RJxKIVzZSLBXYK",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60be39889bcd5229282949aa"
+  },
+  "name": "Maru Jemis",
+  "email": "jemis@gmail.com",
+  "mobile": 9876543218,
+  "password": "$2a$10$XYPTmoP/1I/5O1OlUISAMOq0Fgps390FxW8TIw9pgW8EARIDB1IjO",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60be39eb9bcd5229282949ab"
+  },
+  "name": "Dhruval Mayavnashi",
+  "email": "dhruval@gmail.com",
+  "mobile": 9876543219,
+  "password": "$2a$10$YgmW2GfZszTjIUTB1ssame.3mcVz2Jocd6A9bC.AdEUwRncdbM6L6",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60be3a019bcd5229282949ac"
+  },
+  "name": "Modi Axit",
+  "email": "axit@gmail.com",
+  "mobile": 9876543220,
+  "password": "$2a$10$xOgYqCHgz6dAsHLIpMSWjuuM/8au1OkIazEQbWfOHJuOfrAMvtQl2",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60be3a199bcd5229282949ad"
+  },
+  "name": "Harsh Modi",
+  "email": "harshm@gmail.com",
+  "mobile": 9876543221,
+  "password": "$2a$10$uAc7cpvjT0uis4IgkUUmOO31Bts1I6n3/TMHGlaNdxftWRz2GeZDK",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60be3a329bcd5229282949ae"
+  },
+  "name": "Naika Priya",
+  "email": "priya@gmail.com",
+  "mobile": 9876543222,
+  "password": "$2a$10$VTZjcyUcMg1DCk3nbPCKwO3f3Pqp8s6HnfbelBwjSR4GeDD0Ap/lC",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60be3a4e9bcd5229282949af"
+  },
+  "name": "Nalawala Hatim",
+  "email": "hatim@gmail.com",
+  "mobile": 9876543223,
+  "password": "$2a$10$pwGnChHvZCpw/4HHtEtefewfZXVJFp3uRZF3Fe6WdlhgMv5U0SjZe",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60be3a679bcd5229282949b0"
+  },
+  "name": "Nalawala Inshiya",
+  "email": "inshiya@gmail.com",
+  "mobile": 9876543224,
+  "password": "$2a$10$3qHdzpJM.Aw.qzINe.1grOrQbDRPt9TAXqU8UXSZl80SmuZFQmTz6",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60be3a899bcd5229282949b1"
+  },
+  "name": "Pandya Poojan",
+  "email": "poojan@gmail.com",
+  "mobile": 9876543225,
+  "password": "$2a$10$0JdB60H/sVAzXTpr0uQD0Otr3NNkZQTcFeF2/0cgIdeq4o/0ADWNa",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60be3acd9bcd5229282949b2"
+  },
+  "name": "Patel Apexa",
+  "email": "apexa@gmail.com",
+  "mobile": 9876543226,
+  "password": "$2a$10$VBnCd4smGRYsmOnCDp7kr.OPRetMtIzwSeuMx3cXh3MY2H2tT5zKi",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60be3aec9bcd5229282949b3"
+  },
+  "name": "Patel Darshan",
+  "email": "darshan@gmail.com",
+  "mobile": 9876543227,
+  "password": "$2a$10$dOCwrUT9xluG2hR85IgdlOjeoZHZ/Ota4pOwxaR6aF9cxMHWayDeS",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60be3b029bcd5229282949b4"
+  },
+  "name": "Patel Harsh",
+  "email": "harshp@gmail.com",
+  "mobile": 9876543228,
+  "password": "$2a$10$4uKhIQhJQuOIpTjfSVgJGuYMMEKe.ISnHpiXasukeQ3DDEKhRimI.",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60be3b2a9bcd5229282949b6"
+  },
+  "name": "Patel Jay",
+  "email": "jaya@gmail.com",
+  "mobile": 9876543229,
+  "password": "$2a$10$V6vNKun0TcfI58CsBmEADuxHXaZED.ztf3B5MRywUeb0bPRCWmyZC",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60be3b3f9bcd5229282949b7"
+  },
+  "name": "Patel Jay",
+  "email": "jayr@gmail.com",
+  "mobile": 9876543230,
+  "password": "$2a$10$XTzosicHo/1g8RIeRwBiO.JD7.oZ/8bLXrmr.7d7o65SKYugzGjMe",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c06966d271871fb87f7688"
+  },
+  "name": "Bhargav Sagar",
+  "email": "bhargav@gmail.com",
+  "mobile": 9876543215,
+  "password": "$2a$10$Iyl1OiFENdshXeORBIYBx.33L06QXE5mb7/W9AAR5Qw7o6u.fDvtC",
+  "__v": 0,
+  "block": false
+},{
+  "_id": {
+    "$oid": "60c72fff504d5808043efd17"
+  },
+  "name": "Yas Patel",
+  "email": "yas@gmail.com",
+  "mobile": 9876543236,
+  "password": "$2a$10$olNB0YF9lggUKPVmSFY3B.r5J78snNIkv797PNBD7h/zl6Ad.2uBm",
+  "__v": 0,
+  "block": false
+}]

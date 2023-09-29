@@ -1,0 +1,49 @@
+@import "./left";
+@import "./right";
+@import "./details";
+
+.portfolio-container{
+    width:1536px;
+    margin:0 auto;
+    padding-left: $side_double_xl;
+    padding-right: $side_double_xl;
+}
+
+.portfolio{
+    padding-top:100px;
+    padding-bottom:116px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap:90px;
+    &:nth-child(odd){
+        .portfolio-left{
+            grid-column: 1/2;
+        }
+        .portfolio-right{
+            grid-column:2/3;
+            grid-row:1/3;
+        }
+    }
+    &:nth-child(even){
+        .portfolio-right{
+            grid-column:1/2;
+            grid-row:1/3;
+        }
+        position: relative;
+        &::after{
+            content: "";
+            width:100vw;
+            height: 100%;
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%, -50%);
+            background-color: $light_bg;
+            z-index: -1;
+        }
+    }
+    &:last-child{// BECAUSE FOOTER HAVE ALSO A PADDING TOP...
+        padding-bottom:0;
+    }
+}
+

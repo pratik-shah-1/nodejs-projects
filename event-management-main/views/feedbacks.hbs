@@ -1,0 +1,33 @@
+<div class="mt-5 pt-2 container">
+	<div class="row feedback">
+		{{#each feedbacks}}
+			{{#if this.student}}
+				<div class="col-lg-4 col-md-4 col-sm-6 col-12">
+					<div class="shadow-sm border rounded m-1 mb-4 overflow-auto" style="height:200px;">
+						<p class="h5 p-3 px-4 border-bottom">{{this.student.name}}</p>
+						<p class="px-4 " style="line-height:30px">{{this.feedback}}</p>
+					</div>					
+				</div>
+			{{else if this.event_manager}}
+				<div class="col-lg-4 col-md-4 col-sm-6 col-12">
+					<div class="shadow-sm border rounded m-1 mb-4 overflow-auto" style="height:200px;">
+						<p class="h5 p-3 px-4 bg-dark text-light">{{this.event_manager.name}}</p>
+						<p class="px-4 " style="line-height:30px">{{this.feedback}}</p>
+					</div>					
+				</div>
+			{{else if this.volunteer}}
+				<div class="col-lg-4 col-md-4 col-sm-6 col-12">
+					<div class="shadow-sm border rounded m-1 mb-4 overflow-auto" style="height:200px;">
+						<p class="h5 p-3 px-4 bg-dark text-light">{{this.volunteer.name}}</p>
+						<p class="px-4 " style="line-height:30px">{{this.feedback}}</p>
+					</div>					
+				</div>
+			{{/if}}
+		{{/each}}
+	</div>
+</div>
+
+
+{{#unless feedbacks}}
+	<p class="display-4 mt-5 text-center">No feedback yet</p>
+{{/unless}}

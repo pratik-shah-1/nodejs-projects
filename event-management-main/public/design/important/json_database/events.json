@@ -1,0 +1,421 @@
+[{
+  "_id": {
+    "$oid": "60bb24245d8ea4188ca7bd26"
+  },
+  "amount": 50,
+  "event_manager": {
+    "$oid": "60bb1e4985835322800c65f6"
+  },
+  "name": "PHP Workshop",
+  "category": "Workshop",
+  "details": "PHP is a general-purpose scripting language especially suited to web development. It was originally created by Danish-Canadian programmer Rasmus Lerdorf in 1994. The PHP reference implementation is now produced by The PHP Group.PHP is a general-purpose scripting language especially suited to web development. It was originally created by Danish-Canadian programmer Rasmus Lerdorf in 1994. The PHP reference implementation is now produced by The PHP Group.",
+  "image": "\\upload\\1622877220819_php_hack.jfif",
+  "certificate": true,
+  "winner": false,
+  "type": "paid",
+  "location": "Online",
+  "capacity": 100,
+  "start_time": "11:30 AM",
+  "end_time": "05:45 PM",
+  "start_date": "21/06/2021",
+  "end_date": "22/06/2021",
+  "person_name": "Yas Patel",
+  "person_mobile": 7980654321,
+  "createdAt": {
+    "$date": "2021-06-05T07:13:40.839Z"
+  },
+  "updatedAt": {
+    "$date": "2021-06-07T10:33:20.227Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60bb24995d8ea4188ca7bd27"
+  },
+  "amount": 20,
+  "event_manager": {
+    "$oid": "60bb1e4985835322800c65f6"
+  },
+  "name": "Logical Programming",
+  "category": "Technical",
+  "details": "Computer programming is the process of designing and building an executable computer program to accomplish a specific computing result or to perform a specific taskComputer programming is the process of designing and building an executable computer program to accomplish a specific computing result or to perform a specific taskComputer programming is the process of designing and building an executable computer program to accomplish a specific computing result or to perform a specific task",
+  "image": "\\upload\\1622877337160_logic_programming.jfif",
+  "certificate": true,
+  "winner": false,
+  "type": "paid",
+  "location": "Microsoft Teams",
+  "capacity": 100,
+  "start_time": "12:45 PM",
+  "end_time": "04:45 PM",
+  "start_date": "26/06/2021",
+  "end_date": "03/07/2021",
+  "person_name": "Yas Patel",
+  "person_mobile": 7980654321,
+  "createdAt": {
+    "$date": "2021-06-05T07:15:37.193Z"
+  },
+  "updatedAt": {
+    "$date": "2021-06-05T07:15:37.193Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60bb31fddc72812a4c010767"
+  },
+  "amount": 0,
+  "event_manager": {
+    "$oid": "60bb1e4985835322800c65f6"
+  },
+  "name": "Machine Learning",
+  "category": "Workshop",
+  "details": "Machine learning is the study of computer algorithms that improve automatically through experience and by the use of data. It is seen as a part of artificial intelligence.Machine learning is the study of computer algorithms that improve automatically through experience and by the use of data. It is seen as a part of artificial intelligence.Machine learning is the study of computer algorithms that improve automatically through experience and by the use of data. It is seen as a part of artificial intelligence.",
+  "certificate": true,
+  "winner": false,
+  "type": "free",
+  "location": "Google Meets",
+  "capacity": 150,
+  "start_time": "10:45 AM",
+  "end_time": "05:45 PM",
+  "start_date": "05/06/2021",
+  "end_date": "05/06/2021",
+  "person_name": "Yas Patel",
+  "person_mobile": 7980654321,
+  "createdAt": {
+    "$date": "2021-06-05T08:12:45.531Z"
+  },
+  "updatedAt": {
+    "$date": "2021-06-05T08:24:21.468Z"
+  },
+  "__v": 0,
+  "image": "\\upload\\1622881399359_machine_learning.jpg"
+},{
+  "_id": {
+    "$oid": "60bb3a7a309419034c5b4626"
+  },
+  "amount": 100,
+  "event_manager": {
+    "$oid": "60bb1cf573597622109f5c1b"
+  },
+  "name": "TED X",
+  "category": "Leadership",
+  "details": "TED Conferences LLC is an American media organization that posts talks online for free distribution under the slogan \"ideas worth spreading\". TED was conceived by Richard Saul Wurman, who co-founded it with Harry Marks in February 1984 as a conference; it has been held annually since 1990. TED Conferences LLC is an American media organization that posts talks online for free distribution under the slogan \"ideas worth spreading\". TED was conceived by Richard Saul Wurman, who co-founded it with Harry Marks in February 1984 as a conference; it has been held annually since 1990. ",
+  "image": "\\upload\\1623082782104_tedx.jpg",
+  "certificate": true,
+  "winner": false,
+  "type": "paid",
+  "location": "Auditorium",
+  "capacity": "200",
+  "start_time": "02:18 PM",
+  "end_time": "02:18 PM",
+  "start_date": "07/06/2021",
+  "end_date": "12/06/2021",
+  "person_name": "Keshav Acharya",
+  "person_mobile": 7890654321,
+  "createdAt": {
+    "$date": "2021-06-05T08:48:58.155Z"
+  },
+  "updatedAt": {
+    "$date": "2021-06-07T16:19:42.134Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60bb435b309419034c5b462e"
+  },
+  "amount": 0,
+  "event_manager": {
+    "$oid": "60bb1e2785835322800c65f5"
+  },
+  "name": "Run for Green Environment",
+  "category": "Technical",
+  "details": "The Winter Olympic Games is a major international multi-sport event held once every four years for sports practiced on snow and ice. The first Winter Olympic Games, the 1924 Winter Olympics, were held in Chamonix, FranceThe Winter Olympic Games is a major international multi-sport event held once every four years for sports practiced on snow and ice. The first Winter Olympic Games, the 1924 Winter Olympics, were held in Chamonix, FranceThe Winter Olympic Games is a major international multi-sport event held once every four years for sports practiced on snow and ice. The first Winter Olympic Games, the 1924 Winter Olympics, were held in Chamonix, France",
+  "image": "\\upload\\1623083156411_run.jpg",
+  "certificate": true,
+  "winner": false,
+  "type": "free",
+  "location": "VGEC to Gandhinagar",
+  "capacity": "100",
+  "start_time": "02:56 PM",
+  "end_time": "02:56 PM",
+  "start_date": "12/06/2021",
+  "end_date": "18/06/2021",
+  "person_name": "Suraj Yadav",
+  "person_mobile": 7809654321,
+  "createdAt": {
+    "$date": "2021-06-05T09:26:51.104Z"
+  },
+  "updatedAt": {
+    "$date": "2021-06-07T16:25:56.429Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60bdb6eaa569e61ea88352a9"
+  },
+  "amount": 40,
+  "event_manager": {
+    "$oid": "60bb1e4985835322800c65f6"
+  },
+  "name": "Game Development",
+  "category": "Workshop",
+  "details": "Video game development is the process of developing a video game. The effort is undertaken by a developer, ranging from a single person to an international team dispersed across the globeVideo game development is the process of developing a video game. The effort is undertaken by a developer, ranging from a single person to an international team dispersed across the globe",
+  "image": "\\upload\\1623045866172_game_dev.jpeg",
+  "certificate": false,
+  "winner": false,
+  "type": "paid",
+  "location": "Google Meets",
+  "capacity": 100,
+  "start_time": "11:30 AM",
+  "end_time": "05:30 PM",
+  "start_date": "07/06/2021",
+  "end_date": "21/06/2021",
+  "person_name": "Yas Patel",
+  "person_mobile": 7980654321,
+  "createdAt": {
+    "$date": "2021-06-07T06:04:26.240Z"
+  },
+  "updatedAt": {
+    "$date": "2021-06-07T06:04:26.240Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60be3c46adad7711840dbe80"
+  },
+  "amount": 50,
+  "event_manager": {
+    "$oid": "60bb1e4985835322800c65f6"
+  },
+  "name": "Python",
+  "category": "Technical",
+  "details": "Python is an interpreted high-level general-purpose programming language. Python's design philosophy emphasizes code readability with its notable use of significant indentation.Python is an interpreted high-level general-purpose programming language. Python's design philosophy emphasizes code readability with its notable use of significant indentation.Python is an interpreted high-level general-purpose programming language. Python's design philosophy emphasizes code readability with its notable use of significant indentation.",
+  "image": "\\upload\\1623080006680_python.jfif",
+  "certificate": true,
+  "winner": false,
+  "type": "paid",
+  "location": "Google Meets",
+  "capacity": 50,
+  "start_time": "10:30 AM",
+  "end_time": "05:30 PM",
+  "start_date": "07/06/2021",
+  "end_date": "28/06/2021",
+  "person_name": "Yas Patel",
+  "person_mobile": 7980654321,
+  "createdAt": {
+    "$date": "2021-06-07T15:33:26.744Z"
+  },
+  "updatedAt": {
+    "$date": "2021-06-07T15:35:06.199Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60be3ff03aa4561b00d1f1c3"
+  },
+  "amount": 0,
+  "event_manager": {
+    "$oid": "60bb1e4985835322800c65f6"
+  },
+  "name": "UI/UX Design",
+  "category": "Workshop",
+  "details": "UI Developer stands for User Interface Design, a technology-focused role that seeks to create digital software that entices the user into a seamless interaction between human and computer. This career path seeks to improve the user experience by making web page or software interactions simple, fun, easy and effective.UI Developer stands for User Interface Design, a technology-focused role that seeks to create digital software that entices the user into a seamless interaction between human and computer. This career path seeks to improve the user experience by making web page or software interactions simple, fun, easy and effective.UI Developer stands for User Interface Design, a technology-focused role that seeks to create digital software that entices the user into a seamless interaction between human and computer. This career path seeks to improve the user experience by making web page or software interactions simple, fun, easy and effective.UI Developer stands for User Interface Design, a technology-focused role that seeks to create digital software that entices the user into a seamless interaction between human and computer. This career path seeks to improve the user experience by making web page or software interactions simple, fun, easy and effective.",
+  "image": "\\upload\\1623080944688_ui_ux.jpg",
+  "certificate": true,
+  "winner": false,
+  "type": "free",
+  "location": "Microsoft Teams",
+  "capacity": 250,
+  "start_time": "10:30 AM",
+  "end_time": "05:30 PM",
+  "start_date": "07/06/2021",
+  "end_date": "21/06/2021",
+  "person_name": "Yas Patel",
+  "person_mobile": 7980654321,
+  "createdAt": {
+    "$date": "2021-06-07T15:49:04.723Z"
+  },
+  "updatedAt": {
+    "$date": "2021-06-07T15:49:04.723Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60be41c73aa4561b00d1f1c6"
+  },
+  "amount": 50,
+  "event_manager": {
+    "$oid": "60bb1e2785835322800c65f5"
+  },
+  "name": "Basic of Interview",
+  "category": "Workshop",
+  "details": "A job interview is an interview consisting of a conversation between a job applicant and a representative of an employer which is conducted to assess whether the applicant should be hired. Interviews are one of the most popularly used devices for employee selection.A job interview is an interview consisting of a conversation between a job applicant and a representative of an employer which is conducted to assess whether the applicant should be hired. Interviews are one of the most popularly used devices for employee selection.A job interview is an interview consisting of a conversation between a job applicant and a representative of an employer which is conducted to assess whether the applicant should be hired. Interviews are one of the most popularly used devices for employee selection.",
+  "image": "\\upload\\1623081415086_interview.jpg",
+  "certificate": false,
+  "winner": false,
+  "type": "paid",
+  "location": "Google Meets",
+  "capacity": 500,
+  "start_time": "10:30 AM",
+  "end_time": "05:30 PM",
+  "start_date": "07/06/2021",
+  "end_date": "21/06/2021",
+  "person_name": "Suraj Yadav",
+  "person_mobile": 7809654321,
+  "createdAt": {
+    "$date": "2021-06-07T15:56:55.107Z"
+  },
+  "updatedAt": {
+    "$date": "2021-06-07T15:56:55.107Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60be42533aa4561b00d1f1c7"
+  },
+  "amount": 0,
+  "event_manager": {
+    "$oid": "60bb1e2785835322800c65f5"
+  },
+  "name": "Football",
+  "category": "Sports",
+  "details": "Association football is the second most popular sport in India after · The · The origin of football in India can be traced back to mid-nineteenth century when the game ...Association football is the second most popular sport in India after · The · The origin of football in India can be traced back to mid-nineteenth century when the game ...Association football is the second most popular sport in India after · The · The origin of football in India can be traced back to mid-nineteenth century when the game ...Association football is the second most popular sport in India after · The · The origin of football in India can be traced back to mid-nineteenth century when the game ...Association football is the second most popular sport in India after · The · The origin of football in India can be traced back to mid-nineteenth century when the game ...Association football is the second most popular sport in India after · The · The origin of football in India can be traced back to mid-nineteenth century when the game ...",
+  "image": "\\upload\\1623081555886_football2.jpg",
+  "certificate": false,
+  "winner": true,
+  "type": "free",
+  "location": "A Block Ground",
+  "capacity": 25,
+  "start_time": "02:30 PM",
+  "end_time": "04:30 PM",
+  "start_date": "07/06/2021",
+  "end_date": "14/06/2021",
+  "person_name": "Suraj Yadav",
+  "person_mobile": 7809654321,
+  "createdAt": {
+    "$date": "2021-06-07T15:59:15.986Z"
+  },
+  "updatedAt": {
+    "$date": "2021-06-07T15:59:15.986Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60be43e88e5a7b13a8ae14a6"
+  },
+  "amount": 0,
+  "event_manager": {
+    "$oid": "60bb1e2785835322800c65f5"
+  },
+  "name": "Workshop on IOT",
+  "category": "Technical",
+  "details": "The Internet of things describes the network of physical objects—a.k.a. \"things\"—that are embedded with sensors, software, and other technologies for the purpose of connecting and exchanging data with other devices and systems over the Internet.The Internet of things describes the network of physical objects—a.k.a. \"things\"—that are embedded with sensors, software, and other technologies for the purpose of connecting and exchanging data with other devices and systems over the Internet.The Internet of things describes the network of physical objects—a.k.a. \"things\"—that are embedded with sensors, software, and other technologies for the purpose of connecting and exchanging data with other devices and systems over the Internet.The Internet of things describes the network of physical objects—a.k.a. \"things\"—that are embedded with sensors, software, and other technologies for the purpose of connecting and exchanging data with other devices and systems over the Internet.",
+  "certificate": true,
+  "winner": true,
+  "type": "free",
+  "location": "Microsoft Teams",
+  "capacity": "No Limit",
+  "start_time": "10:30 AM",
+  "end_time": "12:00 AM",
+  "start_date": "07/06/2021",
+  "end_date": "21/06/2021",
+  "person_name": "Suraj Yadav",
+  "person_mobile": 7809654321,
+  "createdAt": {
+    "$date": "2021-06-07T16:06:00.448Z"
+  },
+  "updatedAt": {
+    "$date": "2021-06-07T16:09:09.148Z"
+  },
+  "__v": 0,
+  "image": "\\upload\\1623082149120_iot.webp"
+},{
+  "_id": {
+    "$oid": "60be4521edd3db0ed0268a22"
+  },
+  "amount": 0,
+  "event_manager": {
+    "$oid": "60bb1cf573597622109f5c1b"
+  },
+  "name": "Public Speaking",
+  "category": "Leadership",
+  "details": "Public speaking is the act of speaking face to face to a live audience. However, due to the evolution of public speaking, it is modernly viewed as any form of speaking between an audience and the speaker. Traditionally, public speaking was considered to be a part of the art of persuasion.Public speaking is the act of speaking face to face to a live audience. However, due to the evolution of public speaking, it is modernly viewed as any form of speaking between an audience and the speaker. Traditionally, public speaking was considered to be a part of the art of persuasion.Public speaking is the act of speaking face to face to a live audience. However, due to the evolution of public speaking, it is modernly viewed as any form of speaking between an audience and the speaker. Traditionally, public speaking was considered to be a part of the art of persuasion.",
+  "image": "\\upload\\1623083022870_Public-Speaking.jpg",
+  "certificate": false,
+  "winner": true,
+  "type": "free",
+  "location": "Auditorium",
+  "capacity": "450",
+  "start_time": "10:30 AM",
+  "end_time": "05:30 PM",
+  "start_date": "07/06/2021",
+  "end_date": "15/06/2021",
+  "person_name": "Keshav Acharya",
+  "person_mobile": 7890654321,
+  "createdAt": {
+    "$date": "2021-06-07T16:11:13.419Z"
+  },
+  "updatedAt": {
+    "$date": "2021-06-07T16:23:42.885Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60be457aedd3db0ed0268a23"
+  },
+  "amount": 0,
+  "event_manager": {
+    "$oid": "60bb1cf573597622109f5c1b"
+  },
+  "name": "Content Writing",
+  "category": "Non-Technical",
+  "details": "Content writing services is a category of work that first surfaced in the early 1990s, due to an exponential rise in online activities.Content writing services is a category of work that first surfaced in the early 1990s, due to an exponential rise in online activities.Content writing services is a category of work that first surfaced in the early 1990s, due to an exponential rise in online activities.Content writing services is a category of work that first surfaced in the early 1990s, due to an exponential rise in online activities.",
+  "image": "\\upload\\1623082362053_content_writing.jpg",
+  "certificate": true,
+  "winner": true,
+  "type": "free",
+  "location": "E Block",
+  "capacity": "150",
+  "start_time": "10:30 AM",
+  "end_time": "05:30 PM",
+  "start_date": "07/06/2021",
+  "end_date": "21/06/2021",
+  "person_name": "Keshav Acharya",
+  "person_mobile": 7890654321,
+  "createdAt": {
+    "$date": "2021-06-07T16:12:42.150Z"
+  },
+  "updatedAt": {
+    "$date": "2021-06-07T16:12:42.150Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60be45ecedd3db0ed0268a24"
+  },
+  "amount": 30,
+  "event_manager": {
+    "$oid": "60bb1cf573597622109f5c1b"
+  },
+  "name": "Motivation Seminar",
+  "category": "Social",
+  "details": "Motivation is what explains why people or animals initiate, continue or terminate a certain behavior at a particular time. Motivational states are commonly understood as forces acting within the agent that create a disposition to engage in goal-directed behavior.Motivation is what explains why people or animals initiate, continue or terminate a certain behavior at a particular time. Motivational states are commonly understood as forces acting within the agent that create a disposition to engage in goal-directed behavior.Motivation is what explains why people or animals initiate, continue or terminate a certain behavior at a particular time. Motivational states are commonly understood as forces acting within the agent that create a disposition to engage in goal-directed behavior.",
+  "image": "\\upload\\1623082944166_motivation2.jpg",
+  "certificate": false,
+  "winner": false,
+  "type": "paid",
+  "location": "M Block",
+  "capacity": "No Limit",
+  "start_time": "10:30 AM",
+  "end_time": "02:30 PM",
+  "start_date": "07/06/2021",
+  "end_date": "21/06/2021",
+  "person_name": "Keshav Acharya",
+  "person_mobile": 7890654321,
+  "createdAt": {
+    "$date": "2021-06-07T16:14:36.374Z"
+  },
+  "updatedAt": {
+    "$date": "2021-06-07T16:22:24.184Z"
+  },
+  "__v": 0
+}]

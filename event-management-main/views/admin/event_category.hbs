@@ -1,0 +1,100 @@
+<div class="py-3 d-flex flex-column align-items-center flex-sm-row justify-content-sm-end">
+	<button class="btn btn-primary mb-3 mb-sm-0 mr-sm-5" onclick="excel()">
+		<span class="h6 m-0 text-uppercase">Export as Excel</span>
+	</button>
+	<div class="d-flex align-items-center mr-sm-5">
+		<input type="text" class="form-control" placeholder="Add Category" name="category" style="width:250px;border-radius:4px 0px 0px 4px">
+		<button class="btn btn-primary" style="border-radius:0px 4px 4px 0px" onclick="add_category();"><span class="h6">ADD</span></button>
+	</div>
+</div>
+
+<script>
+	function excel(){
+	    $("#event_category").table2excel({
+	        filename: "Event_Category.xls",	        
+	    });		
+	}
+</script>
+
+<div class="table-responsive">
+	<table class="table table-striped" id="event_category">
+		<thead class="thead-dark">
+			<tr>
+				<th class="h6 text-uppercase">Index</th>
+				<th class="h6 text-uppercase">Category Name</th>
+				<th class="h6 text-uppercase">Action</th>
+			</tr>
+		</thead>
+		<tbody>
+			{{#each event_category}}
+			<tr>
+				<td class="h5 font-weight-normal">{{index @index}}</td>
+				<td class="h5 font-weight-normal">{{this.name}}</td>
+				<td class="h5 font-weight-normal">
+					<button class="btn btn-sm btn-outline-danger" onclick="delete_category(this,`{{this._id}}`);">
+						<span class="h6">DELETE</span>
+					</button>
+				</td>
+			</tr>
+			{{/each}}
+		</tbody>
+	</table>
+</div>
+
+{{#unless event_category}}
+	<p class="mt-5 display-4 text-center">No Categories</p>
+{{/unless}}
+
+<input type="hidden" name="_token" value="{{_token}}">
+
+<script>
+	
+	function add_category(){
+		const category = $('[name="category"]').val();
+		console.log(category);
+		const _token = $('[name="_token"]').val();
+		$.ajax({
+			url : '/category',
+			method : 'POST',
+			data : {_token, category},
+			success : function(res){
+				if(res){
+					swal('Category Added Successfully','','success');
+					window.location.reload();
+				}
+			},
+			error : function(xhr, status, error){
+				swal(xhr.responseJSON.message,'','error');
+			}
+		});
+	}
+	
+	function delete_category(element, id){
+		const _token = $('[name="_token"]').val();
+		swal({
+			title:'Are you sure?',
+			icon:'warning',
+			buttons:true
+		})
+		.then((res)=>{
+			if(res){
+				$.ajax({
+					url : '/category/'+id,
+					method : 'DELETE',
+					data : {_token},
+					success : function(ress){
+						console.log(ress);
+						if(ress){
+							element.parentElement.parentElement.outerHTML = ``;
+							swal('Category Deleted Successfully...','','success');
+						}
+					},
+					error : function(xhr, status, error){
+						swal(xhr.responseJSON.message,'','error');
+					}
+				})
+			}
+		})
+	}
+
+</script>

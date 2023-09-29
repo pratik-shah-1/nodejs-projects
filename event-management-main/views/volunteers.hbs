@@ -1,0 +1,162 @@
+
+{{#if volunteers}}
+
+	<div class="d-flex flex-column flex-sm-row align-items-center justify-content-center justify-content-sm-end py-3">
+		<button class="btn btn-primary mb-3 mb-sm-0 mr-sm-5" onclick="excel()">
+			<span class="h6 m-0 text-uppercase">Export as Excel</span>
+		</button>
+		<input class="mr-sm-5 form-control" type="text" placeholder="Search by Event" name="filter" style="width:250px;">	
+	</div>
+
+	<script>
+		function excel(){
+		    $("#volunteers").table2excel({
+		        filename: "Volunteers.xls",
+		    });		
+		}
+	</script>
+
+	<div class="table-responsive">
+		<table class="table table-striped" id="volunteers">
+			<thead class="thead-dark">
+				<tr>
+					<th class="h6 text-uppercase">Index</th>
+					<th class="h6 text-uppercase">Volunteer Name</th>
+					<th class="h6 text-uppercase">Email Address</th>
+					<th class="h6 text-uppercase">Mobile Number</th>
+					<th class="h6 text-uppercase">Action</th>
+				</tr>
+			</thead>
+			<tbody>
+			{{#each volunteers}}			
+				<tr>
+					<td class="h5 font-weight-normal">{{index @index}}</td>
+					<td class="h5 font-weight-normal">{{this.volunteer.name}}</td>
+					<td class="h5 font-weight-normal">{{this.volunteer.email}}</td>
+					<td class="h5 font-weight-normal">{{this.volunteer.mobile}}</td>
+					<td class="h5 font-weight-normal">
+						{{#if this.accepted}}
+							<button class="btn btn-primary mr-3" disabled>
+								<span class="h6">MEMBER</span>
+							</button>
+							<button class="btn btn-warning mr-3" onclick="reject(this,`{{this.event}}`,`{{this.volunteer._id}}`)">
+								<span class="h6">REJECT</span>
+							</button>							
+							<button class="btn btn-danger" onclick="remove(this,`{{this.event}}`,`{{this.volunteer._id}}`)"><span class="h6">REMOVE</span>
+							</button>
+						{{else if this.rejected}}
+							<button class="btn btn-success mr-3" onclick="accept(this,`{{this.event}}`,`{{this.volunteer._id}}`)">
+								<span class="h6">ACCEPT</span>
+							</button>							
+							<button class="btn btn-warning mr-3" disabled>
+								<span class="h6">REJECTED</span>
+							</button>
+							<button class="btn btn-danger" onclick="remove(this,`{{this.event}}`,`{{this.volunteer._id}}`)"><span class="h6">REMOVE</span>
+							</button>
+						{{else if this.pending}}
+							<button class="btn btn-success mr-3" onclick="accept(this,`{{this.event}}`,`{{this.volunteer._id}}`)">
+								<span class="h6">ACCEPT</span>
+							</button>
+							<button class="btn btn-warning mr-3" onclick="reject(this,`{{this.event}}`,`{{this.volunteer._id}}`)">
+								<span class="h6">REJECT</span>
+							</button>
+							<button class="btn btn-danger" onclick="remove(this,`{{this.event}}`,`{{this.volunteer._id}}`)"><span class="h6">REMOVE</span>
+							</button>
+						{{/if}}				
+					</td>
+				</tr>
+			{{/each}}
+			</tbody>
+		</table>
+	</div>
+{{else}}
+<p class="display-4 text-center mt-5">You haven't any volunteer's request</p>
+{{/if}}
+
+<input type="hidden" name="_token" value="{{_token}}">
+
+<script>
+
+	$('[name="filter"]').keyup(function(){
+		var value = $(this).val().toLowerCase();
+	    $("tbody tr").filter(function() {
+	      	$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+	    });
+	});
+
+	function accept(btn, event, id){
+		const _token = $('[name="_token"]').val();
+		$.ajax({
+			// here :id is id of volunteer
+			url : '/member/accept/'+event+"/"+id,
+			method : 'PUT',
+			data : {_token},
+			success : function(res){
+				btn.parentElement.innerHTML = `
+					<button class="btn btn-primary mr-3" disabled>
+						<span class="h6">MEMBER</span>
+					</button>
+					<button class="btn btn-warning mr-3" onclick="reject(this,'${event}','${id}')">
+						<span class="h6">REJECT</span>
+					</button>
+					<button class="btn btn-danger" onclick="remove(this,'${event}','${id}')"><span class="h6">REMOVE</span>
+					</button>`;
+				swal('Member accepted successfully','','success');
+			},
+			error : function(xhr, status, error){
+				swal('Something went wrong','','error');
+			}
+		});
+	}
+	
+	function reject(btn, event, id){
+		const _token = $('[name="_token"]').val();
+		$.ajax({
+			// here :id is id of volunteer
+			url : '/member/reject/'+event+"/"+id,
+			method : 'PUT',
+			data : {_token},
+			success : function(res){
+				btn.parentElement.innerHTML = `
+					<button class="btn btn-success mr-3" onclick="accept(this,'${event}','${id}')">
+						<span class="h6">ACCEPT</span>
+					</button>
+					<button class="btn btn-warning mr-3" disabled>
+						<span class="h6">REJECTED</span>
+					</button>
+					<button class="btn btn-danger" onclick="remove(this,'${event}','${id}')"><span class="h6">REMOVE</span>
+					</button>`;
+				swal('Member rejected successfully','','success');
+			},
+			error : function(xhr, status, error){
+				swal('Something went wrong','','error');
+			}
+		});
+	}
+	
+	function remove(btn, event, id){
+		const _token = $('[name="_token"]').val();
+		swal({
+		  	title: "Are you sure?",
+		  	icon: "warning",
+		  	buttons: true
+		})
+		.then((res)=>{
+			if(res){
+				$.ajax({
+					// here :id is id of volunteer
+					url : '/member/remove/'+event+"/"+id,
+					method : 'DELETE',
+					data : {_token},
+					success : function(res){
+						btn.parentElement.parentElement.outerHTML = ``;				
+						swal('Member removed successfully','','success');
+					},
+					error : function(xhr, status, error){
+						swal('Something went wrong','','error');
+					}
+				});			
+			}
+		});
+	}
+</script>

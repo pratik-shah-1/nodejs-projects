@@ -1,0 +1,530 @@
+{{!-- For Collapse Filter popup --}}
+<div class="collapse filter_popup shadow border rounded" id="filter_popup">
+	{{!-- All Filter Container --}}
+	<div class="d-flex p-4">
+		{{!-- Check box Filter --}}
+		<div>
+			<div class="d-flex align-items-center justify-content-between">
+				<label style="width:150px;" class="text-uppercase h6 m-0 py-2">Free</label>
+				<input class="border" type="checkbox" name="free" onchange="filter_data()">
+			</div>
+			<div class="d-flex align-items-center justify-content-between">
+				<label style="width:150px;" class="text-uppercase h6 m-0 py-2">PAID</label>
+				<input class="px-2" type="checkbox" name="paid" onchange="filter_data()">
+			</div>
+			<div class="d-flex align-items-center justify-content-between">
+				<label style="width:150px;" class="text-uppercase h6 m-0 py-2">Expired</label>
+				<input class="px-2" type="checkbox" name="expired" onchange="filter_data()">
+			</div>
+			<div class="d-flex align-items-center justify-content-between">
+				<label style="width:150px;" class="text-uppercase h6 m-0 py-2">Certificate</label>
+				<input class="px-2" type="checkbox" name="certificate" onchange="filter_data()">
+			</div>
+			<div class="d-flex align-items-center justify-content-between">
+				<label style="width:150px;" class="text-uppercase h6 m-0 py-2">Winner Prize</label>
+				<input class="px-2" type="checkbox" name="winner" onchange="filter_data()">
+			</div>
+		</div>
+		{{!-- Date Filter --}}
+		<div class="ml-4 border-left d-flex flex-column px-4">
+			<label style="width:170px;" class="text-uppercase h6 m-0 pt-2">Date Range</label>
+			<div class="mt-3 d-flex align-items-center">
+				<label class="h6" style="width:170px;">FROM</label>
+				<input class="form-control" type="date" name="start_date" onchange="filter_data()">
+				<button class="ml-3 btn btn-sm btn-danger py-2" onclick="reset_start_date();">
+					<span class="h6">RESET</span>
+				</button>						
+			</div>
+			<div class="mt-3 d-flex align-items-center">
+				<label class="h6" style="width:170px;">TO</label>
+				<input class="form-control" type="date" name="end_date" onchange="filter_data()">
+				<button class="ml-3 btn btn-sm btn-danger py-2" onclick="reset_end_date()">
+					<span class="h6">RESET</span>
+				</button>					
+			</div>
+		</div>		
+	</div>
+</div>
+
+
+<script>
+	function reset_start_date(){
+		$('[name="start_date"]').val('');
+		filter_data();			
+	}
+	function reset_end_date(){
+		$('[name="end_date"]').val('');
+		filter_data();			
+	}		
+
+	function filter_data(){
+		var free=false, 
+			paid=false, 
+			expired=false, 
+			certificate=false, 
+			winner=false, 
+			start_date = $('[name="start_date"]').val(), 
+			end_date = $('[name="end_date"]').val();
+		
+		if($('[name="free"]').prop('checked'))
+			free = true;
+		if($('[name="paid"]').prop('checked'))
+			paid = true;
+		if($('[name="expired"]').prop('checked'))
+			expired = true;
+		if($('[name="certificate"]').prop('checked'))
+			certificate = true;
+		if($('[name="winner"]').prop('checked'))
+			winner = true;
+		$.ajax({
+			url : 'filter_event',
+			method : 'POST',
+			data : {free, paid, expired, certificate, winner, start_date, end_date},
+			success : function(res){
+			    const events = $(".home_event_container .event");
+			    for(let i=0; i<events.length; i++){
+	    			events[i].classList.add('d-none');
+			    	for(let j=0; j<res.length; j++){
+			    		const e_name = events[i].children[1].children[0].innerText;
+			    		if(e_name==res[j].name){
+			    			events[i].classList.remove('d-none');
+			    		}
+				    }
+			    }
+			},
+			error : function(xhr, status, error){
+				swal('Something went wrong','','error');
+			}
+		});
+	}
+</script>
+
+
+
+<div class="d-flex flex-column flex-md-row justify-content-end align-items-center py-4 mr-md-5 pr-md-5 ">
+	{{!-- Filter button --}}
+	<button class="btn btn-sm btn-primary mr-md-5 mb-2 mb-sm-0" data-toggle='collapse' data-target="#filter_popup">
+		<span class="h6 m-0">FILTER EVENT</span> 
+		<i class="fas fa-angle-down"></i>
+	</button>
+		
+	{{#if student}}
+		<div class="custom-control custom-switch rounded p-2  ml-4 mx-md-3 my-2">
+	  		<input type="checkbox" class="custom-control-input" name="wishlist" id="wishlist" >
+	  		<label class="custom-control-label" for="wishlist">
+	  			<span class="h6 text-uppercase">Wishlist Items</span>
+	  		</label>
+		</div>
+	{{else if volunteer}}
+		<div class="custom-control custom-switch rounded p-2  ml-4 mx-md-3 my-2">
+	  		<input type="checkbox" class="custom-control-input" name="wishlist" id="wishlist" >
+	  		<label class="custom-control-label" for="wishlist">
+	  			<span class="h6 text-uppercase">Wishlist Items</span>
+	  		</label>
+		</div>
+	{{/if}}		
+
+	<input class="form-control" type="text" name="filter" placeholder="Search" style="width:250px;">
+
+</div>
+
+<main class="mt-1 d-flex flex-wrap justify-content-center home_event_container">
+	{{!-- Here we will render three type of event --}}
+	{{!-- home_event_container for filter by search (jqueryfilter) --}}
+	{{!-- 1:Active Event --}}
+	{{!-- 1:Cancel Event --}}
+	{{!-- 1:Expired Event --}}	
+	{{#each events}} 
+		{{#if this.expire}}
+			<div class="event shadow-sm border rounded p-3 blur">
+				<div class="event_img"> 
+					<a href="/event/{{this.slug}}"  target='_blank'> <img class="rounded" src="{{this.image}}" alt=""></a> 
+				</div>
+				<div class="d-flex justify-content-between py-2">
+					<p class="h6 pb-1 m-0 text-capitalize text-truncate" data-toggle="tooltip" data-placement="top" title="{{this.name}}">{{this.name}}</p>
+					<p class="h6 m-0 text-uppercase">{{this.type}}</p>
+				</div>
+				<div class="pt-2 mb-3">
+					<p class="h6 d-flex" style="font-size:14px">
+						<span style="width:50px;">START</span>
+						<span class="mx-2">:</span> 
+						<span>{{this.start_date}}</span>
+					</p>
+					<p class="h6 m-0 d-flex" style="font-size:14px">
+						<span style="width:50px;">END</span>
+						<span class="mx-2">:</span>
+						<span>{{this.end_date}}</span>
+					</p>
+				</div>
+				{{#if @root.event_manager}}
+					<div>
+						<a href="/regenerate_event/{{this.slug}}" class="btn btn-sm btn-info"><span class="h6">REGENERATE</span>	</a>				
+					</div>
+				{{else}}
+					<div class="d-flex align-items-center justify-content-start">
+						<p class="m-0 h6 rounded text-danger">EXPIRED</p>
+					</div>
+				{{/if}}
+			</div>
+		{{else if this.cancel}}
+			<div class="event shadow-sm border rounded p-3 blur">
+				<div class="event_img"> 
+					<a href="/event/{{this.slug}}"  target='_blank'> <img class="rounded" src="{{this.image}}" alt=""></a> 
+				</div>
+				<div class="d-flex justify-content-between py-2">
+					<p class="h6 pb-1 m-0 text-capitalize text-truncate" data-toggle="tooltip" data-placement="top" title="{{this.name}}">{{this.name}}</p>
+					<p class="h6 m-0 text-uppercase">{{this.type}}</p>
+				</div>
+				<div class="pt-2 mb-3">
+					<p class="h6 d-flex" style="font-size:14px">
+						<span style="width:50px;">START</span>
+						<span class="mx-2">:</span> 
+						<span>{{this.start_date}}</span>
+					</p>
+					<p class="h6 m-0 d-flex" style="font-size:14px">
+						<span style="width:50px;">END</span>
+						<span class="mx-2">:</span>
+						<span>{{this.end_date}}</span>
+					</p>
+				</div>
+				<div class="d-flex align-items-center justify-content-start">
+					<p class="m-0 h6 rounded text-info">CANCELED</p>
+				</div>
+			</div>
+		{{else}}
+			<div class="event shadow-sm border rounded p-3">
+				<div class="event_img"> 
+					<a href="/event/{{this.slug}}" target='_blank'> <img class="rounded" src="{{this.image}}" alt=""></a> 
+				</div>
+				<div class="d-flex justify-content-between py-2">
+					<p class="h6 pb-1 m-0 text-capitalize text-truncate" data-toggle="tooltip" data-placement="top" data-html='true' title="{{this.name}}">{{this.name}}</p>
+					<p class="h6 m-0 text-uppercase">{{this.type}}</p>
+				</div>
+				<div class="pt-2">
+					<p class="h6 d-flex" style="font-size:14px">
+						<span style="width:50px;">START</span>
+						<span class="mx-2">:</span> 
+						<span>{{this.start_date}}</span>
+					</p>
+					<p class="h6 m-0 d-flex" style="font-size:14px">
+						<span style="width:50px;">END</span>
+						<span class="mx-2">:</span>
+						<span>{{this.end_date}}</span>
+					</p>
+				</div>
+				<div class="pt-2">
+					<p class="m-0 h6 d-flex" style="font-size:14px">
+						<span style="width:50px;">TIME</span>
+						<span class="mx-2">:</span> 
+						<span>{{this.start_time}} - {{this.end_time}}</span>
+					</p>
+				</div>
+				{{#if @root.logged}}
+					<div class="d-flex align-items-center justify-content-between pt-3">
+						{{#if @root.volunteer}}
+							{{#if this.pending}}
+								<button class="btn btn-sm btn-warning" disabled>
+									<span class="h6">PENDING</span>
+								</button>
+							{{else if this.accepted}}
+								<button class="btn btn-sm btn-primary" disabled>
+									<span class="h6">MEMBER</span>
+								</button>
+							{{else if this.rejected}}
+								<button class="btn btn-sm btn-danger" disabled>
+									<span class="h6">REJECTED</span>
+								</button>
+							{{else}}
+								<button class="btn btn-sm btn-warning" 
+								onclick="volunteer_request_popup(this)" 
+								value="{{this._id}}">
+									<span class="h6">BE VOLUNTEER</span>
+								</button>
+							{{/if}}
+						{{else if @root.student}}
+							{{#if this.participated}}
+								<button class="btn btn-sm btn-primary"disabled>
+									<span class="h6">PARTICIPATED</span>
+								</button>
+							{{else}}
+								<button class="btn btn-sm btn-warning" 
+								onclick="participate_popup(this)" 
+								value="{{this._id}}">
+									<span class="h6">PARTICIPATE</span>
+								</button>
+							{{/if}}
+						{{/if}}	
+						{{!-- Wishlist addButton --}}
+						{{#unless @root.event_manager}}
+							{{#if this.wishlist}}
+								<p class="d-none">wishlist</p>
+								<button class="btn btn-sm btn-outline-danger border-0" 
+								onclick="remove_from_wishlist(this)" 
+								value="{{this._id}}"
+								title="Remove from Wishlist">
+									<i class="fas fa-heart"></i>
+								</button>
+							{{else}}
+								<button class="btn btn-sm btn-outline-danger border-0" 
+								onclick="add_to_wishlist(this)" 
+								value="{{this._id}}"
+								title="Add to Wishlist" 
+								{{#if this.participated}}
+									disabled
+								{{else if this.pending}}
+									disabled
+								{{else if this.accepted}}
+									disabled
+								{{else if this.rejected}}
+									disabled
+								{{/if}}>
+									<i class="far fa-heart"></i>
+								</button>
+							{{/if}}
+						{{/unless}}
+					</div>			
+				{{/if}}
+			</div>
+		{{/if}}					
+
+	{{/each}}
+</main>
+
+<input type="hidden" name="_token" value="{{_token}}">
+
+<script>
+
+	function isLogged(){
+		if(`{{logged}}`=='true' && `{{event_manager}}`=='true'){
+			swal("You are an Event Manager",'','warning');
+		}
+		else if(`{{logged}}`=='true' && (`{{volunteer}}`=='true' || `{{student}}`=='true')){
+			return true;
+		}
+		else{
+			swal('You need login','','warning');
+		}
+	}
+
+	function participate(event_id){
+		const payment = $('[name="payment_participate"]').val();
+		const _token = $('[name="_token"]').val();
+		const event = event_id;
+		const btn = temp;
+		if(isLogged()){
+			swal({
+			  	title: "Are you sure?",
+			  	icon: "warning",
+			  	buttons: true
+			})
+			.then((res) => {
+			  	if(res){
+					$.ajax({
+						url : '/participate',
+						method : 'POST',
+						data: {event, _token, payment},
+						success : function(res){
+							if(res){
+								//CLOSE POPUP BUTTON
+						  		$('body').css({'height':'auto','overflow':'auto'});
+						  		$('.random').removeClass('backlight');
+						  		$('.participate_popup').addClass('d-none');		
+								btn.parentElement.innerHTML = `
+									<button class="btn btn-sm btn-primary" disabled> 
+										<span class="h6">PARTICIPATED</span>
+									</button>
+									<button class="btn btn-sm btn-primary" disabled> 
+											<i class="fas fa-plus"></i> 
+									</button>`;
+								swal('Participated Successfully...','','success');
+							}
+						},
+						error : function(xhr, status, err){
+							swal(xhr.responseJSON.message,'', 'error');
+						}
+					});
+			  	} 
+			});
+		}
+	}
+
+	function be_volunteer(event_id){
+		const _token = $('[name="_token"]').val();
+		const event = event_id;
+		const btn = temp;
+		if(isLogged()){
+			swal({
+			  	title: "Are you sure?",
+			  	icon: "warning",
+			  	buttons: true
+			})
+			.then((res)=>{
+				if(res){
+					$.ajax({
+						url : '/member',
+						method : "POST",
+						data : {_token, event},
+						success : function(res){
+							if(res){
+								btn.parentElement.innerHTML = `
+									<button class="btn btn-sm btn-warning" disabled> 
+										<span class="h6">PENDING</span>
+									</button>
+									<button class="btn btn-sm btn-primary" disabled> 
+											<i class="fas fa-plus"></i> 
+									</button>`;
+								$('.volunteer_request_popup').addClass('d-none');
+								$('.random').removeClass('backlight');
+								$('body').css({'heigh':'auto', 'overflow':'auto'});
+								swal('Request sent successfully...','','success');		
+							}
+						},
+						error : function(xhr, status, err){
+							swal(xhr.responseJSON.message,'', 'error');
+						}
+					});
+				}				
+			});
+		}
+	}
+
+	function add_to_wishlist(btn){
+		const _token = $('[name="_token"]').val();
+		if(isLogged()){
+			$.ajax({
+				url : '/wishlist',
+				method : 'POST',
+				data : {_token, event:btn.value},
+				success : function(res){
+					if(res){
+						var new_html = `
+							<button class="btn btn-sm btn-warning" 
+									onclick="participate_popup(this)" 
+									value="${btn.value}"> 
+									<span class="h6">PARTICIPATE</span>
+							</button>
+							<p class="d-none">wishlist</p>
+							<button class="btn btn-sm btn-outline-danger border-0"
+									onclick="remove_from_wishlist(this)" 
+									value="${btn.value}"
+									title="Remove from Wishlist"> 
+									<i class="fas fa-heart"></i> 
+							</button>`;	
+						if(`{{volunteer}}`=='true'){
+							new_html = `
+							<button class="btn btn-sm btn-warning" 
+									onclick="volunteer_request_popup(this)" 
+									value="${btn.value}"> 
+									<span class="h6">BE VOLUNTEER</span>
+							</button>
+							<p class="d-none">wishlist</p>
+							<button class="btn btn-sm btn-outline-danger border-0"
+									onclick="remove_from_wishlist(this)" 
+									value="${btn.value}" 
+									title="Remove from Wishlist"> 
+									<i class="fas fa-heart"></i> 
+							</button>`;	
+						}
+						btn.parentElement.innerHTML = new_html;
+						swal('Added to wishlist','', 'success');					
+					}
+				},
+				error : function(xhr, status, error){
+					console.log(error);
+					swal('Something went wrong','', 'error');
+				}
+			});
+		}
+	}
+
+	function remove_from_wishlist(btn){
+		const _token = $('[name="_token"]').val();
+		if(isLogged()){
+			$.ajax({
+				url : '/wishlist/'+btn.value,
+				method : 'DELETE',
+				data : {_token, event:btn.value},
+				success : function(res){
+					if(res){
+						var new_html = `
+							<button class="btn btn-sm btn-warning" 
+									onclick="participate_popup(this)" 
+									value="${btn.value}"> 
+									<span class="h6">PARTICIPATE</span>
+							</button>
+							<button class="btn btn-sm btn-outline-danger border-0" 
+									onclick="add_to_wishlist(this)" 
+									value="${btn.value}" 
+									data-toggle="tooltip" 
+									data-placement="top" 
+									title="Add to Wishlist"> 
+									<i class="far fa-heart"></i> 
+							</button>`;
+						if(`{{volunteer}}`=='true'){
+							new_html = `
+							<button class="btn btn-sm btn-warning" 
+									onclick="volunteer_request_popup(this)" 
+									value="${btn.value}"> 
+									<span class="h6">BE VOLUNTEER</span>
+							</button>
+							<button class="btn btn-sm btn-outline-danger border-0" 
+									onclick="add_to_wishlist(this)" 
+									value="${btn.value}" 
+									data-toggle="tooltip" 
+									data-placement="top" 
+									title="Add to Wishlist"> 
+									<i class="far fa-heart"></i> 
+							</button>`;
+						}
+						btn.parentElement.innerHTML = new_html;
+						swal('Remove from wishlist','', 'success');					
+					}
+				},
+				error : function(xhr, status, error){
+					console.log(error);
+					swal('Something went wrong','', 'error');
+				}
+			});
+		}
+	}
+	
+	// For Wishlist Items...
+	$('[name="wishlist"]').change(function(){
+		if($(this).prop('checked')){
+			var value = 'wishlist';
+		    $(".home_event_container .event").filter(function() {
+		      	$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+		    });
+		}
+		else{
+			var value = '';
+		    $(".home_event_container .event").filter(function() {
+		      	$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+		    });
+		}
+	});
+
+	function wishlist_view(btn){
+		if(btn.value=='wishlist'){
+		    $(".home_event_container .event").filter(function() {
+		      	$(this).toggle($(this).text().toLowerCase().indexOf(btn.value) > -1)
+		    });					
+		    btn.value = '';
+		}
+		else{
+		    $(".home_event_container .event").filter(function() {
+		      	$(this).toggle($(this).text().toLowerCase().indexOf(btn.value) > -1)
+		    });					
+			btn.value = 'wishlist';			
+		}
+	}
+
+	//For Filter...
+	$('[name="filter"]').keyup(function(e){
+		var value = $(this).val().toLowerCase();
+	    $(".home_event_container .event").filter(function() {
+	      	$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+	    });
+	});
+
+</script>

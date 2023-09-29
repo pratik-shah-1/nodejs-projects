@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Event Web Admin {{title}}</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+	<link rel="stylesheet" href="/assets/css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+	<script src="//cdn.rawgit.com/rainabba/jquery-table2excel/1.1.0/dist/jquery.table2excel.min.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg px-4 px-sm-5 shadow-sm">
+	<a class="navbar-brand" href="/admin"><span class="h5 text-dark">EVENT WEB ADMIN</span></a>
+  	<button class="ml-auto navbar-toggler" type="button" data-toggle="collapse" data-target="#navmenu">
+		<i class="fas fa-bars"></i>	  	
+	</button>
+	<div class="collapse navbar-collapse" id="navmenu">
+	    <ul class="navbar-nav ml-auto">
+	      	{{#if admin}}
+		      	<li class="nav-item">
+		      		<a class="nav-link h6 text-dark position-relative" href="/admin/nortifications" style="width:35px;">
+	      				<i class="fas fa-bell primary"></i>
+	      				<span class="h6 m-0 badge badge-danger rounded-circle position-absolute" style="top:0;right:0;">{{admin_nortification_counts}}</span>
+		      		</a>
+		      	</li>
+		      	<li class="nav-item">
+		      		<a class="nav-link h6 text-dark" href="/admin/event_category">EVENT-CATEGORY</a></li>
+		      	<li class="nav-item">
+		      		<a class="nav-link h6 text-dark" href="/admin/events">EVENTS</a></li>
+		      	<li class="nav-item">
+		      		<a class="nav-link h6 text-dark" href="/admin/participants">PARTICIPANTS</a></li>
+		      	<li class="nav-item">
+		      		<a class="nav-link h6 text-dark" href="/admin/volunteers">VOLUNTEERS</a></li>
+		      	<li class="nav-item">
+		      		<a class="nav-link h6 text-dark" href="/admin/event_managers">EVENT-MANAGERS</a></li>
+		      	<li class="nav-item">
+		      		<a class="nav-link h6 text-dark" href="/admin/logout">LOGOUT</a></li>
+	      	{{/if}}
+	    </ul>
+  	</div>		
+</nav>
+
+
+{{{body}}}
+
+{{!-- <footer class="bg-dark py-4 d-flex flex-column align-items-center">
+	<a class="m-0 h6 text-warning py-2 " href="/contact_admin">Contact-Admin</a>
+	<p class="m-0 h6 text-light py-2 ">Copyright &#169; 2021 Event Web <a href="/term_condition">Term & Co.</a> </p>
+</footer> --}}
+
+</body>
+</html>

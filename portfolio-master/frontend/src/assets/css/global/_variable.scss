@@ -1,0 +1,38 @@
+// --------FONT-FAMILY--------
+$font_family : 'Segoe Ui', sans-serif;
+
+// --------COLORS--------
+$primary:#0057FF;
+$secondary: #252525; 
+$paragraph:gray;
+$input_border:lightgray;
+$light_bg:#F6F6F6;
+$dark_bg:#00091C;
+$dark_border:#28253F;
+$sun:#f7a000;
+$shadow:rgba(0,0,0,0.05);
+$neumorphism:rgba(0,0,0, 0.05);
+
+// --------Z-INDEX--------
+$parallex_icon_z:-1;
+$navbar_z:1;
+$fixed_btn_z:2;
+
+// --------OPACITY--------
+$parallex_icon_opacity:0.8;
+
+// --------BREAK-POINTS ACCORODING TO [Tailwind CSS]--------
+$sm:640px;
+$md:768px;
+$lg:1124px;
+$xl:1280px;
+$double_xl:1536px;
+
+//---------SIDE [MARGIN/PADDING]-----------
+$side_sm:20px;
+$side_md:40px;
+$side_lg:60px;
+$side_xl:80px;
+$side_1366px:100px;
+$side_below_dxl:140px;
+$side_double_xl:180px;// FOR MAIN DESIGN...

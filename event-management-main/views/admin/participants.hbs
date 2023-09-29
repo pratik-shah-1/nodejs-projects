@@ -1,0 +1,126 @@
+<div class="py-3 d-flex justify-content-end">
+	<button class="btn btn-primary mr-5" onclick="excel()">
+		<span class="h6 m-0 text-uppercase">Export as Excel</span>
+	</button>
+</div>
+
+<script>
+	function excel(){
+	    $("#participants").table2excel({
+	        filename: "Participants.xls",
+	    });		
+	}
+</script>
+
+<div class="table-responsive">
+	<table class="table table-striped" id="participants">
+		<thead class="thead-dark">
+			<tr>
+				<th class="h6 text-uppercase">Index</th>
+				<th class="h6 text-uppercase">Participant Name</th>
+				<th class="h6 text-uppercase">Email Address</th>
+				<th class="h6 text-uppercase">Mobile Number</th>
+				<th class="h6 text-uppercase">Participated</th>
+				<th class="h6 text-uppercase">Action</th>
+			</tr>
+		</thead>
+		<tbody>
+			{{#each participants}}
+			<tr>
+				<td class="h5 font-weight-normal">{{index @index}}</td>
+				<td class="h5 font-weight-normal">{{this.name}}</td>
+				<td class="h5 font-weight-normal">{{this.email}}</td>
+				<td class="h5 font-weight-normal">{{this.mobile}}</td>
+				<td class="h5 font-weight-normal">{{this.participated_events}}</td>
+				<td class="h5 font-weight-normal">
+					{{#if this.block}}
+						<button class="btn btn-sm btn-danger" onclick="block_account(this,`{{this._id}}`);">
+							<span class="h6">BLOCKED</span>
+						</button>
+					{{else}}
+						<button class="btn btn-sm btn-danger" onclick="block_account(this,`{{this._id}}`);">
+							<span class="h6">BLOCK</span>
+						</button>
+					{{/if}}
+					<button class="mx-3 btn btn-sm btn-outline-danger" onclick="delete_account(this,`{{this._id}}`);">
+						<span class="h6">DELETE</span>
+					</button>
+				</td>
+			</tr>
+			{{/each}}
+		</tbody>
+	</table>
+</div>
+
+<input type="hidden" name="_token" value="{{_token}}">
+
+<script>
+
+	function block_account(element, id){
+		const _token = $('[name="_token"]').val();
+		swal({
+			title:'Are you sure?',
+			icon:'warning',
+			buttons:true
+		})
+		.then((res)=>{
+			if(res){
+				$.ajax({
+					url : '/participant/'+id,
+					method : 'PUT',
+					data : {_token},
+					success : function(ress){
+						if(ress.message==true){
+							element.outerHTML = `
+							<button class="btn btn-sm btn-danger" onclick="block_account(this,'${id}');">
+								<span class="h6">BLOCKED</span>
+							</button>`;
+							swal('Participant Blocked Successfully','','success');
+						}
+						else{
+							element.outerHTML = `
+							<button class="btn btn-sm btn-danger" onclick="block_account(this,'${id}');">
+								<span class="h6">BLOCK</span>
+							</button>`;
+							swal('Participant UnBlocked Successfully','','success');
+						}
+					},
+					error : function(xhr, status, error){
+						swal(xhr.responseJSON.message,'','error');
+					}
+				});
+			}
+		});
+	}
+
+	
+	function delete_account(element, id){
+		const _token = $('[name="_token"]').val();
+		swal({
+			title:'Are you sure?',
+			icon:'warning',
+			buttons:true
+		})
+		.then((res)=>{
+			if(res){
+				$.ajax({
+					url : '/participant/'+id,
+					method : 'DELETE',
+					data : {_token},
+					success : function(ress){
+						console.log(ress);
+						if(ress){
+							element.parentElement.parentElement.outerHTML = ``;
+							swal('Participant Deleted Successfully...','','success');
+						}
+					},
+					error : function(xhr, status, error){
+						swal(xhr.responseJSON.message,'','error');
+					}
+				})
+			}
+		})
+	}
+
+
+</script>

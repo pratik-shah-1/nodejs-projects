@@ -1,0 +1,1117 @@
+[{
+  "_id": {
+    "$oid": "60c16569c0e8411190daaa8c"
+  },
+  "event_manager": {
+    "$oid": "60c154e02b3cf70af81d7bde"
+  },
+  "message": "Testing Event, this event is removed by Admin",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c24a05ba5d2322d4191af0"
+  },
+  "student": {
+    "$oid": "60be38ae9bcd5229282949a2"
+  },
+  "message": "You are removed from PHP Workshop by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c43b51b5a72816103ea4e2"
+  },
+  "volunteer": {
+    "$oid": "60be39529bcd5229282949a8"
+  },
+  "message": "You are removed from Logical Programming event by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8624c1fe1150374afe5c6"
+  },
+  "student": {
+    "$oid": "60c06a38d271871fb87f768b"
+  },
+  "message": "You are removed from PHP Workshop by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c862561fe1150374afe5c7"
+  },
+  "student": {
+    "$oid": "60c06a38d271871fb87f768b"
+  },
+  "message": "You are removed from Logical Programming by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c862841fe1150374afe5c8"
+  },
+  "student": {
+    "$oid": "60c06a38d271871fb87f768b"
+  },
+  "message": "You are removed from Run for Green Environment by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c862971fe1150374afe5c9"
+  },
+  "student": {
+    "$oid": "60c06a38d271871fb87f768b"
+  },
+  "message": "You are removed from Workshop on IOT by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8a9d8d0c24e0ac4d0fb23"
+  },
+  "student": {
+    "$oid": "60be37a69bcd52292829499b"
+  },
+  "message": "Web Development is Cancel by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8a9d8d0c24e0ac4d0fb24"
+  },
+  "student": {
+    "$oid": "60be38ae9bcd5229282949a2"
+  },
+  "message": "Web Development is Cancel by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8a9d8d0c24e0ac4d0fb25"
+  },
+  "student": {
+    "$oid": "60be38cf9bcd5229282949a3"
+  },
+  "message": "Web Development is Cancel by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8a9d8d0c24e0ac4d0fb26"
+  },
+  "volunteer": {
+    "$oid": "60be37a69bcd52292829499b"
+  },
+  "message": "Web Development is Cancel by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8a9d8d0c24e0ac4d0fb27"
+  },
+  "volunteer": {
+    "$oid": "60be38ae9bcd5229282949a2"
+  },
+  "message": "Web Development is Cancel by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8a9d8d0c24e0ac4d0fb28"
+  },
+  "volunteer": {
+    "$oid": "60be38cf9bcd5229282949a3"
+  },
+  "message": "Web Development is Cancel by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8ac88f1f30031d0936c37"
+  },
+  "student": {
+    "$oid": "60be37919bcd52292829499a"
+  },
+  "message": "Meghdhanush is Cancel by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8ac88f1f30031d0936c38"
+  },
+  "student": {
+    "$oid": "60be387b9bcd5229282949a1"
+  },
+  "message": "Meghdhanush is Cancel by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8ac88f1f30031d0936c39"
+  },
+  "volunteer": {
+    "$oid": "60be37919bcd52292829499a"
+  },
+  "message": "Meghdhanush is Cancel by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8ac88f1f30031d0936c3a"
+  },
+  "volunteer": {
+    "$oid": "60be387b9bcd5229282949a1"
+  },
+  "message": "Meghdhanush is Cancel by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8ac91f1f30031d0936c3c"
+  },
+  "student": {
+    "$oid": "60be37919bcd52292829499a"
+  },
+  "message": "Meghdhanush is Cancel by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8ac91f1f30031d0936c3d"
+  },
+  "student": {
+    "$oid": "60be387b9bcd5229282949a1"
+  },
+  "message": "Meghdhanush is Cancel by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8ac91f1f30031d0936c3e"
+  },
+  "volunteer": {
+    "$oid": "60be37919bcd52292829499a"
+  },
+  "message": "Meghdhanush is Cancel by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8ac91f1f30031d0936c3f"
+  },
+  "volunteer": {
+    "$oid": "60be387b9bcd5229282949a1"
+  },
+  "message": "Meghdhanush is Cancel by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8ac93f1f30031d0936c41"
+  },
+  "student": {
+    "$oid": "60be37919bcd52292829499a"
+  },
+  "message": "Meghdhanush is Cancel by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8ac93f1f30031d0936c42"
+  },
+  "student": {
+    "$oid": "60be387b9bcd5229282949a1"
+  },
+  "message": "Meghdhanush is Cancel by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8ac93f1f30031d0936c43"
+  },
+  "volunteer": {
+    "$oid": "60be37919bcd52292829499a"
+  },
+  "message": "Meghdhanush is Cancel by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8ac93f1f30031d0936c44"
+  },
+  "volunteer": {
+    "$oid": "60be387b9bcd5229282949a1"
+  },
+  "message": "Meghdhanush is Cancel by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8ac94f1f30031d0936c46"
+  },
+  "student": {
+    "$oid": "60be37919bcd52292829499a"
+  },
+  "message": "Meghdhanush is Cancel by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8ac94f1f30031d0936c47"
+  },
+  "student": {
+    "$oid": "60be387b9bcd5229282949a1"
+  },
+  "message": "Meghdhanush is Cancel by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8ac94f1f30031d0936c48"
+  },
+  "volunteer": {
+    "$oid": "60be37919bcd52292829499a"
+  },
+  "message": "Meghdhanush is Cancel by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8ac94f1f30031d0936c49"
+  },
+  "volunteer": {
+    "$oid": "60be387b9bcd5229282949a1"
+  },
+  "message": "Meghdhanush is Cancel by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8ac94f1f30031d0936c4a"
+  },
+  "event_manager": {
+    "$oid": "60bb1e4985835322800c65f6"
+  },
+  "message": "Meghdhanush is Cancel by You",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8acadf1f30031d0936c4b"
+  },
+  "student": {
+    "$oid": "60be37a69bcd52292829499b"
+  },
+  "message": "Web Development is Updated by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8acadf1f30031d0936c4c"
+  },
+  "student": {
+    "$oid": "60be38ae9bcd5229282949a2"
+  },
+  "message": "Web Development is Updated by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8acadf1f30031d0936c4d"
+  },
+  "student": {
+    "$oid": "60be38cf9bcd5229282949a3"
+  },
+  "message": "Web Development is Updated by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8acadf1f30031d0936c4e"
+  },
+  "volunteer": {
+    "$oid": "60be37a69bcd52292829499b"
+  },
+  "message": "Web Development is Updated by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8acadf1f30031d0936c4f"
+  },
+  "volunteer": {
+    "$oid": "60be38ae9bcd5229282949a2"
+  },
+  "message": "Web Development is Updated by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8acadf1f30031d0936c50"
+  },
+  "volunteer": {
+    "$oid": "60be38cf9bcd5229282949a3"
+  },
+  "message": "Web Development is Updated by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8acadf1f30031d0936c51"
+  },
+  "event_manager": {
+    "$oid": "60bb1e4985835322800c65f6"
+  },
+  "message": "Web Development is Updated by You",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8ad31f1f30031d0936c52"
+  },
+  "student": {
+    "$oid": "60be37a69bcd52292829499b"
+  },
+  "message": "Web Development is Cancel by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8ad31f1f30031d0936c53"
+  },
+  "student": {
+    "$oid": "60be38ae9bcd5229282949a2"
+  },
+  "message": "Web Development is Cancel by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8ad31f1f30031d0936c54"
+  },
+  "student": {
+    "$oid": "60be38cf9bcd5229282949a3"
+  },
+  "message": "Web Development is Cancel by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8ad31f1f30031d0936c55"
+  },
+  "volunteer": {
+    "$oid": "60be37a69bcd52292829499b"
+  },
+  "message": "Web Development is Cancel by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8ad31f1f30031d0936c56"
+  },
+  "volunteer": {
+    "$oid": "60be38ae9bcd5229282949a2"
+  },
+  "message": "Web Development is Cancel by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8ad31f1f30031d0936c57"
+  },
+  "volunteer": {
+    "$oid": "60be38cf9bcd5229282949a3"
+  },
+  "message": "Web Development is Cancel by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8ad31f1f30031d0936c58"
+  },
+  "event_manager": {
+    "$oid": "60bb1e4985835322800c65f6"
+  },
+  "message": "Web Development is Cancel by You",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8ad39f1f30031d0936c59"
+  },
+  "student": {
+    "$oid": "60be37a69bcd52292829499b"
+  },
+  "message": "Web Development is Cancel by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8ad39f1f30031d0936c5a"
+  },
+  "student": {
+    "$oid": "60be38ae9bcd5229282949a2"
+  },
+  "message": "Web Development is Cancel by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8ad39f1f30031d0936c5b"
+  },
+  "student": {
+    "$oid": "60be38cf9bcd5229282949a3"
+  },
+  "message": "Web Development is Cancel by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8ad39f1f30031d0936c5c"
+  },
+  "volunteer": {
+    "$oid": "60be37a69bcd52292829499b"
+  },
+  "message": "Web Development is Cancel by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8ad39f1f30031d0936c5d"
+  },
+  "volunteer": {
+    "$oid": "60be38ae9bcd5229282949a2"
+  },
+  "message": "Web Development is Cancel by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8ad39f1f30031d0936c5e"
+  },
+  "volunteer": {
+    "$oid": "60be38cf9bcd5229282949a3"
+  },
+  "message": "Web Development is Cancel by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8ad39f1f30031d0936c5f"
+  },
+  "event_manager": {
+    "$oid": "60bb1e4985835322800c65f6"
+  },
+  "message": "Web Development is Cancel by You",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8ad53f10e311d043daffe"
+  },
+  "student": {
+    "$oid": "60be37a69bcd52292829499b"
+  },
+  "message": "Web Development is Cancel by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8ad53f10e311d043dafff"
+  },
+  "student": {
+    "$oid": "60be37a69bcd52292829499b"
+  },
+  "message": "Web Development is Cancel by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8ad53f10e311d043db000"
+  },
+  "student": {
+    "$oid": "60be38ae9bcd5229282949a2"
+  },
+  "message": "Web Development is Cancel by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8ad53f10e311d043db001"
+  },
+  "student": {
+    "$oid": "60be38ae9bcd5229282949a2"
+  },
+  "message": "Web Development is Cancel by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8ad53f10e311d043db002"
+  },
+  "student": {
+    "$oid": "60be38cf9bcd5229282949a3"
+  },
+  "message": "Web Development is Cancel by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8ad53f10e311d043db003"
+  },
+  "student": {
+    "$oid": "60be38cf9bcd5229282949a3"
+  },
+  "message": "Web Development is Cancel by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8ad53f10e311d043db004"
+  },
+  "volunteer": {
+    "$oid": "60be37a69bcd52292829499b"
+  },
+  "message": "Web Development is Cancel by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8ad53f10e311d043db005"
+  },
+  "volunteer": {
+    "$oid": "60be37a69bcd52292829499b"
+  },
+  "message": "Web Development is Cancel by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8ad53f10e311d043db006"
+  },
+  "volunteer": {
+    "$oid": "60be38ae9bcd5229282949a2"
+  },
+  "message": "Web Development is Cancel by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8ad53f10e311d043db007"
+  },
+  "volunteer": {
+    "$oid": "60be38ae9bcd5229282949a2"
+  },
+  "message": "Web Development is Cancel by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8ad53f10e311d043db008"
+  },
+  "volunteer": {
+    "$oid": "60be38cf9bcd5229282949a3"
+  },
+  "message": "Web Development is Cancel by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8ad53f10e311d043db009"
+  },
+  "volunteer": {
+    "$oid": "60be38cf9bcd5229282949a3"
+  },
+  "message": "Web Development is Cancel by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8ad53f10e311d043db00a"
+  },
+  "event_manager": {
+    "$oid": "60bb1e4985835322800c65f6"
+  },
+  "message": "Web Development is Cancel by You",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8ad53f10e311d043db00b"
+  },
+  "event_manager": {
+    "$oid": "60bb1e4985835322800c65f6"
+  },
+  "message": "Web Development is Cancel by You",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8ae7c48e93b14d4543d70"
+  },
+  "student": {
+    "$oid": "60be37919bcd52292829499a"
+  },
+  "message": "Meghdhanush is Updated by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8ae7c48e93b14d4543d71"
+  },
+  "student": {
+    "$oid": "60be387b9bcd5229282949a1"
+  },
+  "message": "Meghdhanush is Updated by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8ae7c48e93b14d4543d72"
+  },
+  "volunteer": {
+    "$oid": "60be37919bcd52292829499a"
+  },
+  "message": "Meghdhanush is Updated by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8ae7c48e93b14d4543d73"
+  },
+  "volunteer": {
+    "$oid": "60be387b9bcd5229282949a1"
+  },
+  "message": "Meghdhanush is Updated by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8ae7c48e93b14d4543d74"
+  },
+  "event_manager": {
+    "$oid": "60bb1e4985835322800c65f6"
+  },
+  "message": "Meghdhanush is Updated by You",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8ae8648e93b14d4543d75"
+  },
+  "student": {
+    "$oid": "60be37a69bcd52292829499b"
+  },
+  "message": "Web Development is Updated by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8ae8648e93b14d4543d76"
+  },
+  "student": {
+    "$oid": "60be38ae9bcd5229282949a2"
+  },
+  "message": "Web Development is Updated by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8ae8648e93b14d4543d77"
+  },
+  "student": {
+    "$oid": "60be38cf9bcd5229282949a3"
+  },
+  "message": "Web Development is Updated by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8ae8648e93b14d4543d78"
+  },
+  "volunteer": {
+    "$oid": "60be37a69bcd52292829499b"
+  },
+  "message": "Web Development is Updated by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8ae8648e93b14d4543d79"
+  },
+  "volunteer": {
+    "$oid": "60be38ae9bcd5229282949a2"
+  },
+  "message": "Web Development is Updated by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8ae8648e93b14d4543d7a"
+  },
+  "volunteer": {
+    "$oid": "60be38cf9bcd5229282949a3"
+  },
+  "message": "Web Development is Updated by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8ae8648e93b14d4543d7b"
+  },
+  "event_manager": {
+    "$oid": "60bb1e4985835322800c65f6"
+  },
+  "message": "Web Development is Updated by You",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8ae8c48e93b14d4543d7c"
+  },
+  "student": {
+    "$oid": "60be37a69bcd52292829499b"
+  },
+  "message": "Web Development is Cancel by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8ae8c48e93b14d4543d7d"
+  },
+  "student": {
+    "$oid": "60be38ae9bcd5229282949a2"
+  },
+  "message": "Web Development is Cancel by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8ae8c48e93b14d4543d7e"
+  },
+  "student": {
+    "$oid": "60be38cf9bcd5229282949a3"
+  },
+  "message": "Web Development is Cancel by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8ae8c48e93b14d4543d7f"
+  },
+  "volunteer": {
+    "$oid": "60be37a69bcd52292829499b"
+  },
+  "message": "Web Development is Cancel by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8ae8c48e93b14d4543d80"
+  },
+  "volunteer": {
+    "$oid": "60be38ae9bcd5229282949a2"
+  },
+  "message": "Web Development is Cancel by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8ae8c48e93b14d4543d81"
+  },
+  "volunteer": {
+    "$oid": "60be38cf9bcd5229282949a3"
+  },
+  "message": "Web Development is Cancel by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8ae8c48e93b14d4543d82"
+  },
+  "event_manager": {
+    "$oid": "60bb1e4985835322800c65f6"
+  },
+  "message": "Web Development is Cancel by You",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8d8df7166b601e0da1596"
+  },
+  "event_manager": {
+    "$oid": "60bb1e4985835322800c65f6"
+  },
+  "message": "PHP  is Cancel by You",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8d92a7166b601e0da1597"
+  },
+  "student": {
+    "$oid": "60be37a69bcd52292829499b"
+  },
+  "message": "Web Development is Updated by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8d92a7166b601e0da1598"
+  },
+  "student": {
+    "$oid": "60be38ae9bcd5229282949a2"
+  },
+  "message": "Web Development is Updated by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8d92a7166b601e0da1599"
+  },
+  "student": {
+    "$oid": "60be38cf9bcd5229282949a3"
+  },
+  "message": "Web Development is Updated by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8d92a7166b601e0da159a"
+  },
+  "volunteer": {
+    "$oid": "60be37a69bcd52292829499b"
+  },
+  "message": "Web Development is Updated by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8d92a7166b601e0da159b"
+  },
+  "volunteer": {
+    "$oid": "60be38ae9bcd5229282949a2"
+  },
+  "message": "Web Development is Updated by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8d92a7166b601e0da159c"
+  },
+  "volunteer": {
+    "$oid": "60be38cf9bcd5229282949a3"
+  },
+  "message": "Web Development is Updated by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8d92a7166b601e0da159d"
+  },
+  "event_manager": {
+    "$oid": "60bb1e4985835322800c65f6"
+  },
+  "message": "Web Development is Updated by You",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8d9677166b601e0da159e"
+  },
+  "event_manager": {
+    "$oid": "60bb1e4985835322800c65f6"
+  },
+  "message": "PHP , this event is removed by Admin",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c9c1780422fa20689c9a14"
+  },
+  "student": {
+    "$oid": "60be37919bcd52292829499a"
+  },
+  "message": "Meghdhanush is Cancel by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c9c1780422fa20689c9a15"
+  },
+  "student": {
+    "$oid": "60be387b9bcd5229282949a1"
+  },
+  "message": "Meghdhanush is Cancel by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c9c1780422fa20689c9a16"
+  },
+  "volunteer": {
+    "$oid": "60be37919bcd52292829499a"
+  },
+  "message": "Meghdhanush is Cancel by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c9c1780422fa20689c9a17"
+  },
+  "volunteer": {
+    "$oid": "60be387b9bcd5229282949a1"
+  },
+  "message": "Meghdhanush is Cancel by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c9c1780422fa20689c9a18"
+  },
+  "event_manager": {
+    "$oid": "60bb1e4985835322800c65f6"
+  },
+  "message": "Meghdhanush is Cancel by You",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c9cb264f9a6c348cb07e34"
+  },
+  "student": {
+    "$oid": "60be37919bcd52292829499a"
+  },
+  "message": "PHP Workshop is Updated by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c9cb264f9a6c348cb07e35"
+  },
+  "student": {
+    "$oid": "60be381f9bcd52292829499e"
+  },
+  "message": "PHP Workshop is Updated by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c9cb264f9a6c348cb07e36"
+  },
+  "student": {
+    "$oid": "60be387b9bcd5229282949a1"
+  },
+  "message": "PHP Workshop is Updated by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c9cb264f9a6c348cb07e37"
+  },
+  "student": {
+    "$oid": "60be38ae9bcd5229282949a2"
+  },
+  "message": "PHP Workshop is Updated by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c9cb264f9a6c348cb07e38"
+  },
+  "volunteer": {
+    "$oid": "60be37919bcd52292829499a"
+  },
+  "message": "PHP Workshop is Updated by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c9cb264f9a6c348cb07e39"
+  },
+  "volunteer": {
+    "$oid": "60be381f9bcd52292829499e"
+  },
+  "message": "PHP Workshop is Updated by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c9cb264f9a6c348cb07e3a"
+  },
+  "volunteer": {
+    "$oid": "60be387b9bcd5229282949a1"
+  },
+  "message": "PHP Workshop is Updated by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c9cb264f9a6c348cb07e3b"
+  },
+  "volunteer": {
+    "$oid": "60be38ae9bcd5229282949a2"
+  },
+  "message": "PHP Workshop is Updated by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c9cb264f9a6c348cb07e3c"
+  },
+  "event_manager": {
+    "$oid": "60bb1e4985835322800c65f6"
+  },
+  "message": "PHP Workshop is Updated by You",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c9cef14f9a6c348cb07e3d"
+  },
+  "student": {
+    "$oid": "60be37a69bcd52292829499b"
+  },
+  "message": "Web Development is Cancel by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c9cef14f9a6c348cb07e3e"
+  },
+  "student": {
+    "$oid": "60be38ae9bcd5229282949a2"
+  },
+  "message": "Web Development is Cancel by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c9cef14f9a6c348cb07e3f"
+  },
+  "student": {
+    "$oid": "60be38cf9bcd5229282949a3"
+  },
+  "message": "Web Development is Cancel by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c9cef14f9a6c348cb07e40"
+  },
+  "volunteer": {
+    "$oid": "60be37a69bcd52292829499b"
+  },
+  "message": "Web Development is Cancel by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c9cef14f9a6c348cb07e41"
+  },
+  "volunteer": {
+    "$oid": "60be38ae9bcd5229282949a2"
+  },
+  "message": "Web Development is Cancel by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c9cef14f9a6c348cb07e42"
+  },
+  "volunteer": {
+    "$oid": "60be38cf9bcd5229282949a3"
+  },
+  "message": "Web Development is Cancel by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c9cef14f9a6c348cb07e43"
+  },
+  "event_manager": {
+    "$oid": "60bb1e4985835322800c65f6"
+  },
+  "message": "Web Development is Cancel by You",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c9cef84f9a6c348cb07e44"
+  },
+  "student": {
+    "$oid": "60be37a69bcd52292829499b"
+  },
+  "message": "Web Development is Updated by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c9cef84f9a6c348cb07e45"
+  },
+  "student": {
+    "$oid": "60be38ae9bcd5229282949a2"
+  },
+  "message": "Web Development is Updated by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c9cef84f9a6c348cb07e46"
+  },
+  "student": {
+    "$oid": "60be38cf9bcd5229282949a3"
+  },
+  "message": "Web Development is Updated by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c9cef84f9a6c348cb07e47"
+  },
+  "volunteer": {
+    "$oid": "60be37a69bcd52292829499b"
+  },
+  "message": "Web Development is Updated by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c9cef84f9a6c348cb07e48"
+  },
+  "volunteer": {
+    "$oid": "60be38ae9bcd5229282949a2"
+  },
+  "message": "Web Development is Updated by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c9cef84f9a6c348cb07e49"
+  },
+  "volunteer": {
+    "$oid": "60be38cf9bcd5229282949a3"
+  },
+  "message": "Web Development is Updated by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c9cef84f9a6c348cb07e4a"
+  },
+  "event_manager": {
+    "$oid": "60bb1e4985835322800c65f6"
+  },
+  "message": "Web Development is Updated by You",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60cb0d437fed9a0b14d3e74d"
+  },
+  "student": {
+    "$oid": "60c06a38d271871fb87f768b"
+  },
+  "message": "You are removed from Logical Programming by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60cb0d4a7fed9a0b14d3e74e"
+  },
+  "student": {
+    "$oid": "60c06a38d271871fb87f768b"
+  },
+  "message": "You are removed from Game Development by Event-Manager",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60cb0d567fed9a0b14d3e74f"
+  },
+  "student": {
+    "$oid": "60c06a38d271871fb87f768b"
+  },
+  "message": "You are removed from UI/UX Design by Event-Manager",
+  "__v": 0
+}]

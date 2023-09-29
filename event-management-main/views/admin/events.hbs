@@ -1,0 +1,87 @@
+
+<div class="py-3 d-flex justify-content-end">
+	<button class="btn btn-primary mr-5" onclick="excel()">
+		<span class="h6 m-0 text-uppercase">Export as Excel</span>
+	</button>
+</div>
+
+<script>
+	function excel(){
+	    $("#events").table2excel({
+	        filename: "Events.xls",
+	    });		
+	}
+</script>
+
+<div class="table-responsive">
+	<table class="table table-striped" id="events">
+		<thead class="thead-dark">
+			<tr>
+				<th class="h6 text-uppercase">Index</th>
+				<th class="h6 text-uppercase">Event Name</th>
+				<th class="h6 text-uppercase">Participants</th>
+				<th class="h6 text-uppercase">Volunteers</th>
+				<th class="h6 text-uppercase">Type</th>
+				<th class="h6 text-uppercase">Date</th>
+				<th class="h6 text-uppercase">Time</th>
+				<th class="h6 text-uppercase">Location</th>
+				<th class="h6 text-uppercase">Action</th>
+			</tr>
+		</thead>
+		<tbody>
+			{{#each events}}
+			<tr>
+				<td class="h5 font-weight-normal">{{index @index}}</td>
+				<td class="h5 font-weight-normal text-capitalize">
+					<a href="/admin/event/{{this._id}}" class="text-dark text-truncate" style="width:200px;" title="{{this.name}}">
+						<span>{{this.name}}</span> 
+					</a>
+				</td>
+				<td class="h5 font-weight-normal">{{this.participants}}</td>
+				<td class="h5 font-weight-normal">{{this.volunteers}}</td>
+				<td class="h5 font-weight-normal text-uppercase">{{this.type}}</td>
+				<td class="h5 font-weight-normal">{{this.start_date}} - {{this.end_date}}</td>
+				<td class="h5 font-weight-normal">{{this.start_time}} - {{this.end_time}}</td>
+				<td class="h5 font-weight-normal">{{this.location}}</td>
+				<td class="h5 font-weight-normal">
+					<button class="mx-2 btn btn-sm btn-outline-danger" onclick="delete_event(this,`{{this._id}}`);"><span class="h6">DELETE</span></button>
+				</td>
+			</tr>
+			{{/each}}
+		</tbody>
+	</table>
+</div>
+
+<input type="hidden" name="_token" value="{{_token}}">
+
+<script>
+		
+	function delete_event(element, id){
+		const _token = $('[name="_token"]').val();
+		swal({
+			title:'Are you sure?',
+			icon:'warning',
+			buttons:true
+		})
+		.then((res)=>{
+			if(res){
+				$.ajax({
+					url : '/event/'+id,
+					method : 'DELETE',
+					data : {_token},
+					success : function(ress){
+						console.log(ress);
+						if(ress){
+							element.parentElement.parentElement.outerHTML = ``;
+							swal('Event Deleted Successfully...','','success');
+						}
+					},
+					error : function(xhr, status, error){
+						swal(xhr.responseJSON.message,'','error');
+					}
+				})
+			}
+		})
+	}
+
+</script>

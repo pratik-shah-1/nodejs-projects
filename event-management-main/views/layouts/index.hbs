@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Event Web {{title}}</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+	<link rel="stylesheet" href="/assets/css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+	<script src="//cdn.rawgit.com/rainabba/jquery-table2excel/1.1.0/dist/jquery.table2excel.min.js"></script>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg px-4 px-sm-5 shadow-sm">
+	<a class="navbar-brand" href="/"><span class="h5 text-dark">EVENT WEB</span></a>
+  	<button class="ml-auto navbar-toggler" type="button" data-toggle="collapse" data-target="#navmenu">
+		<i class="fas fa-bars"></i>	  	
+	</button>
+	<div class="collapse navbar-collapse" id="navmenu">
+	    <ul class="navbar-nav ml-auto">
+	    	{{#if logged}}
+		      	<li class="nav-item">
+		      		<a class="nav-link h6 text-dark position-relative" href="/nortification" style="width:35px;">
+	      				<i class="fas fa-bell primary"></i>
+	      				<span class="h6 m-0 badge badge-danger rounded-circle position-absolute" style="top:0;right:0;" id="nortifications">{{nortification_counts}}</span>
+		      		</a>
+		      	</li>
+	    	{{/if}}
+	    	{{#if student}}
+		      	<li class="nav-item"><a class="nav-link h6 text-dark" href="/participated_events">PARTICIPATED EVENTS</a></li>
+	    	{{else if volunteer}}
+		      	<li class="nav-item"><a class="nav-link h6 text-dark" href="/joined_events">JOINED EVENTS</a></li>
+	    	{{else if event_manager}}
+		      	<li class="nav-item"><a class="nav-link h6 text-dark" href="/add_event">ADD EVENT</a></li>
+		      	<li class="nav-item"><a class="nav-link h6 text-dark" href="/my_events">MY EVENTS</a></li>
+	    	{{/if}}
+
+	      	{{#if logged}}
+		      	<li class="nav-item active">
+		      		<a class="nav-link h6 text-dark" href="/profile">PROFILE</a></li>
+		      	<li class="nav-item active">
+		      		<a class="nav-link h6 text-dark" href="/logout">LOGOUT</a></li>
+	      	{{else}}
+		      	<li class="nav-item active">
+		      		<a class="nav-link h6 text-dark" href="/login">LOGIN</a></li>
+	      	{{/if}}
+	    </ul>
+  	</div>		
+</nav>
+
+{{{body}}}
+
+
+
+<div class="random"></div>
+
+{{!-- ----------------How to Payment for Participate----------------------- --}}
+<div class="shadow p-3 rounded participate_popup d-none">
+	{{!-- Close Popup --}}
+	<div class="d-flex justify-content-end">
+		<button class="btn btn-sm btn-outline-danger border-0 close_btn_participate_popup">
+			<i class="fas fa-times"></i> 
+		</button>
+	</div>
+	
+	{{!-- IF Same Date Events... --}}
+	<div class="same_date_events mt-4">
+		{{!-- Run time render --}}
+	</div>
+
+	{{!-- Select Payment Options --}}
+	<div class="mt-4">
+		<select class="custom-select" name="payment_participate">
+			<option value="ONLINE">ONLINE</option>
+			<option value="COD">COD</option>
+		</select>			
+	</div>
+	{{!-- Accept Term & Condtion... --}}
+	<div class="mt-4 d-flex align-items-center">
+		<input type="checkbox" name="tc_participate">
+		<p class="h6 m-0 mx-2">Agree with <a href="/term_condition" target="_blank">Term & Conditon?</a> </p>
+	</div>
+	{{!-- Participate_BTN --}}
+	<button class="mt-4 btn btn-sm btn-outline-danger participate_btn" disabled>
+		<span class="h6">PARTICIPATE</span>
+	</button>		
+</div>
+
+
+{{!-- ------------------------Volunteer Request popup------------------------ --}}
+<div class="shadow p-3 rounded volunteer_request_popup d-none">
+	{{!-- Close Popup --}}
+	<div class="d-flex justify-content-end">
+		<button class="btn btn-sm btn-outline-danger border-0 close_btn_request_popup">
+			<i class="fas fa-times"></i> 
+		</button>
+	</div>	
+	{{!-- IF Same Date Events... --}}
+	<div class="same_date_events mt-4">
+		{{!-- Run time render --}}
+	</div>
+	{{!-- Request button --}}
+	<button class="mt-4 btn btn-sm btn-outline-danger request_btn">
+		<span class="h6">SEND REQUEST</span>
+	</button>		
+</div>
+
+<footer class="bg-dark py-2 d-flex flex-column align-items-center">
+	<a class="m-0 h6 text-warning py-2" href="/contact_admin">Contact-Admin</a>
+	<p class="m-0 h6 text-light py-2">Copyright &#169; 2021 Event Web <a href="/term_condition">Term & Co.</a> </p>
+</footer>
+
+
+
+<script>
+	var temp;
+
+	async function participate_popup(element){
+  		temp = element;
+  		
+  		await $.ajax({
+  			url : '/check_event_date/'+element.value,
+  			method : 'GET',
+  			success : function(events){
+  				var temp = "";
+  				if(events.length>0){
+  					temp = `<p class="h6">You Also Participated on <i class="fas fa-arrow-down"></i> below Events on same Date</p>
+							<div class="border p-2 rounded overflow-auto" style="max-height:140px;">`;
+	  				for(let i=0; i<events.length; i++){
+		  				temp += `
+								<div class="p-2 d-flex flex-column justify-content-start">
+									<p class="h6 m-0 text-capitalize text-truncate pr-2" title='${events[i].name}'>${events[i].name}</p> 
+									<span class="small">${events[i].start_date} - ${events[i].end_date}</span> 
+								</div>`;
+	  				} 
+	  				temp += `</div>`; 					
+	  				$('.same_date_events').html(temp);
+  				}
+  			},
+			error : function(xhr, status, error){
+  				swal('Something went wrong','','error');
+  			}
+  		});
+
+  		await $.ajax({
+  			url : '/check_event_type/'+element.value,
+  			method : 'GET',
+  			success: function(res){
+  				if(res.message=='free'){
+	  				$('[name="payment_participate"]').addClass('d-none').val('');
+  				}
+  				else{
+					$('[name="payment_participate"]').removeClass('d-none').val('COD').change();
+  				}
+  			},
+  			error : function(xhr, status, error){
+  				swal('Something went wrong','','error');
+  			}
+  		});
+  		$('.participate_btn').attr('onclick',`participate('${element.value}')`);
+  		$('.participate_popup').removeClass('d-none');
+  		$('body').css({'height':'100vh','overflow':'hidden'});
+  		$('.random').addClass('backlight');
+	}
+
+	async function volunteer_request_popup(element){
+  		temp = element;
+  		
+  		await $.ajax({
+  			url : '/check_event_date/'+element.value,
+  			method : 'GET',
+  			success : function(events){
+  				var temp = "";
+  				if(events.length>0){
+  					temp = `<p class="h6">You Also Requested on <i class="fas fa-arrow-down"></i> Below Events on same Date</p>
+							<div class="p-2 overflow-auto border rounded" style="max-height:140px;">`;
+	  				for(let i=0; i<events.length; i++){
+		  				temp += `
+								<div class="p-2 d-flex flex-column justify-content-start">
+									<p class="h6 m-0 text-capitalize text-truncate pr-2" title='${events[i].name}'>${events[i].name}</p> 
+									<span class="small">${events[i].start_date} - ${events[i].end_date}</span> 
+								</div>`;
+	  				}  				
+	  				temp += `</div>`;	
+	  				$('.same_date_events').html(temp);
+  				}
+  			},
+			error : function(xhr, status, error){
+  				swal('Something went wrong','','error');
+  			}
+  		});
+  		$('.request_btn').attr('onclick',`be_volunteer('${element.value}')`);
+  		$('.volunteer_request_popup').removeClass('d-none');
+  		$('body').css({'height':'100vh','overflow':'hidden'});
+  		$('.random').addClass('backlight');
+	}
+
+
+	$('.close_btn_participate_popup').click(function(e){
+		e.preventDefault();
+		$('.participate_popup').addClass('d-none');
+		$('.random').removeClass('backlight');
+		$('body').css({'heigh':'auto', 'overflow':'auto'});
+	});
+
+	$('.close_btn_request_popup').click(function(e){
+		e.preventDefault();
+		$('.volunteer_request_popup').addClass('d-none');
+		$('.random').removeClass('backlight');
+		$('body').css({'heigh':'auto', 'overflow':'auto'});
+	});
+
+	$('[name="tc_participate"]').change(function(){
+		if($(this).prop('checked'))
+			$('.participate_btn').removeAttr('disabled');
+		else
+			$('.participate_btn').attr('disabled','disabled');
+	});
+
+  	$(function(){
+  		$('[data-toggle="tooltip"]').tooltip()
+	});
+
+</script>
+
+</body>
+</html>

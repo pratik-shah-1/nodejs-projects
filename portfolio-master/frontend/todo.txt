@@ -1,0 +1,6 @@
+1.make github branch
+2.make css style
+3.make constants
+4.very carefull about code optimaization
+5.coding convension
+same in nodejs

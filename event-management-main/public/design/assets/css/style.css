@@ -1,0 +1,284 @@
+/*-------------Global Style---------------*/
+body{
+	min-height:100vh;
+	display:flex;
+	flex-direction:column;
+}
+
+table thead tr th{
+	white-space:nowrap;
+}
+
+table tbody tr td{
+	white-space:nowrap;
+}
+
+textarea{
+	line-height:28px !important;
+}
+
+footer{
+	margin-top:auto;
+}
+
+/*/--------------------General Classes--------------------------/*/
+/*Z INDEX WILL BE 1 BECAUSE POPUP HAS ZINDEX 2*/
+.backlight{
+	width:100%;
+	height:100%;
+	position:fixed;
+	background:black;
+	z-index:1; 
+	opacity:0.5;
+	overflow: hidden;
+}
+
+.filter_popup{
+	position:absolute;
+	top:130px;
+	z-index:2;
+	background:white;
+	left:50%;
+	transform:translateX(-50%);
+	overflow-x:auto;
+	width:85%;
+}
+
+.volunteer_request_popup,
+.participate_popup{
+	width:300px;
+	z-index:2;
+	background:white;
+	position:fixed;
+	top:50%;
+	left:50%;
+	transform:translate(-50%, -50%);
+}
+
+.blur{
+	opacity:0.5;
+}
+.border_left_4{
+	border-left:4px solid black;
+}
+.border_left_5{
+	border-left:5px solid black;
+}
+
+.btn,
+.form-control,
+.custom-control-input,
+.custom-select{
+	box-shadow:none !important;
+}
+
+.form-control:focus,
+.custom-select:focus{
+	border:0.5px solid lightgray;
+}
+/*-------------Home Page Event---------------*/
+.event{
+	width:250px;
+	overflow:hidden;
+	margin:15px;
+}
+.event_img{
+	width:210px;
+	height:120px;
+	overflow:hidden;
+	margin:0 auto;
+}
+.event_img a img{
+	width:100%;
+	height:100%;
+	object-fit:cover;
+	position:relative;
+}
+.event_img a img:before{
+	content:"No Image";
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	display:grid;
+	place-items: center;
+	background:lightgray;
+	font-weight:500;
+	color:gray;
+	object-fit:cover;
+}
+/*-----------Event Details----------*/
+.event_details_img{
+	width:450px;
+	height:auto;
+	border: 0;
+}
+.event_details_img img{
+	width:100%;
+	object-fit:cover;
+	height:250px;
+	position:relative;
+	overflow:hidden;
+}
+.event_details_img img:before{
+	content:"No Image";
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	display:grid;
+	place-items: center;
+	background:lightgray;
+	font-weight:500;
+	font-size:24px;
+	color:gray;
+	object-fit:cover;
+}
+/*-------------Feedback---------------*/
+.feedback div div::-webkit-scrollbar{
+	display:none;
+}
+.nortification::-webkit-scrollbar{
+	display:none;
+}
+/*-------------Event Organizer---------------*/
+.add_event{
+		width:500px;
+}
+
+/*-------------Forms---------------*/
+.signup_form,
+.login_form,
+.forgot_password,
+.otp_section,
+.set_new_password,
+.profile{
+	width:350px;
+}
+.contact_form{
+	width:500px;
+}
+
+
+
+/*--------------Media Query-----------*/
+@media screen and (max-width:992px){
+	.event_details_all{
+		display:flex;
+		flex-direction:column;
+	}
+	.event_details_img{
+		width:100%;
+	}
+	.event_details_img img{
+		max-height:300px;
+	}
+
+}
+
+@media screen and (max-width:776px){
+	.add_event{
+        width:100%;
+	}
+	.event_details_img img{
+		max-height:250px;
+	}
+}
+
+@media screen and (max-width:576px) {
+	.signup_form,
+	.login_form,
+	.forgot_password,
+	.otp_section,
+	.set_new_password,
+	.contact_form,
+	.profile{
+		width:100%;
+	}
+	.event_details_img img{
+		max-height:200px;
+	}
+	.filter_popup{
+		top:170px;
+	}
+
+}
+
+
+/*--------------Certificate-----------------*/
+@media all{
+    *{ -webkit-print-color-adjust:exact; }
+	.certificate{
+		margin:50px auto;
+		width:800px;
+		height:500px;
+		border:10px solid #ffc107;	
+		border-radius:4px;
+		position:relative;
+		overflow:hidden;
+	}
+	.certificate:before{
+		content:"";
+		width:250px;
+		height:300px;
+		transform:rotate(45deg);
+		border-radius:50%;
+		position:absolute;
+		top:-100px;
+		left:-50px;
+		background:#ffc107;
+		opacity:0.2;
+		z-index:-1;
+	}
+	.certificate:after{
+		content:"";
+		width:200px;
+		height:200px;
+		transform:rotate(-45deg);
+		border-radius:50%;
+		position:absolute;
+		bottom:-100px;
+		right:-50px;
+		background:#ffc107;
+		opacity:0.2;
+		z-index:-1;
+	}
+	.certificate_logo{
+		position:absolute;
+		bottom:30px;
+		left:40px;
+		font-size:100px;
+		opacity:0.5;
+		margin:0;
+		padding:0;
+	}
+	.certificate_bubble{
+		position:absolute;
+		top:0%;
+		right:0%;
+		transform:translate(-50%,-50%);
+		width:100px;
+		height:100px;
+		background-color:#ffc107;
+		z-index:-1;
+		opacity:0.2;
+		border-radius:50%;
+	}
+	.certificate_bubble:after{
+		content:"";
+		position:absolute;
+		top:50px;
+		width:200px;
+		height:200px;
+		background-color:#ffc107;
+		z-index:-1;
+		opacity:0.3;
+		border-radius:50%;
+	}
+
+}
+
+
+

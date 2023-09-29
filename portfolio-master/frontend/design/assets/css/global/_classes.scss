@@ -1,0 +1,23 @@
+.form-control:focus,
+.btn:focus,
+.form-select:focus,
+.btn-outline:focus{
+    box-shadow: none !important;
+}
+
+.my-form{
+    width:350px;
+    overflow: hidden;
+}
+
+.neumorphism{
+    box-shadow: 4px 4px 10px $neumorphism,
+               -4px -4px 10px $neumorphism;
+}
+
+@media screen and (max-width:576px) {
+    .my-form{
+        width:calc(100% - 48px);
+    }    
+}
+

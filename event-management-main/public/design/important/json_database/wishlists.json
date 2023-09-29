@@ -1,0 +1,45 @@
+[{
+  "_id": {
+    "$oid": "60c156ec7d529516e803c4a8"
+  },
+  "student": {
+    "$oid": "60c06a38d271871fb87f768b"
+  },
+  "event": {
+    "$oid": "60be41c73aa4561b00d1f1c6"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c156f07d529516e803c4a9"
+  },
+  "student": {
+    "$oid": "60c06a38d271871fb87f768b"
+  },
+  "event": {
+    "$oid": "60be43e88e5a7b13a8ae14a6"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c23cbcc4b2251dc4de7e1c"
+  },
+  "student": {
+    "$oid": "60be37a69bcd52292829499b"
+  },
+  "event": {
+    "$oid": "60bb3a7a309419034c5b4626"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c243e6c4b2251dc4de7e6f"
+  },
+  "volunteer": {
+    "$oid": "60be3aec9bcd5229282949b3"
+  },
+  "event": {
+    "$oid": "60bb24995d8ea4188ca7bd27"
+  },
+  "__v": 0
+}]

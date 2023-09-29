@@ -1,0 +1,676 @@
+[{
+  "_id": {
+    "$oid": "60c893651a046122a001fa21"
+  },
+  "winner": false,
+  "certificate": false,
+  "request": "",
+  "student": {
+    "$oid": "60c06a38d271871fb87f768b"
+  },
+  "event": {
+    "$oid": "60bb435b309419034c5b462e"
+  },
+  "payment": "",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c893a01a046122a001fa23"
+  },
+  "winner": false,
+  "certificate": true,
+  "request": "",
+  "student": {
+    "$oid": "60be37919bcd52292829499a"
+  },
+  "event": {
+    "$oid": "60bb24245d8ea4188ca7bd26"
+  },
+  "payment": "COD",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c893b01a046122a001fa24"
+  },
+  "winner": false,
+  "certificate": false,
+  "request": "",
+  "student": {
+    "$oid": "60be37919bcd52292829499a"
+  },
+  "event": {
+    "$oid": "60c4624c3be55523c05d31fb"
+  },
+  "payment": "COD",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c893b71a046122a001fa25"
+  },
+  "winner": false,
+  "certificate": false,
+  "request": "",
+  "student": {
+    "$oid": "60be37919bcd52292829499a"
+  },
+  "event": {
+    "$oid": "60be457aedd3db0ed0268a23"
+  },
+  "payment": "",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c893db1a046122a001fa26"
+  },
+  "winner": false,
+  "certificate": false,
+  "request": "",
+  "student": {
+    "$oid": "60be37a69bcd52292829499b"
+  },
+  "event": {
+    "$oid": "60c62759c3ac110a04405e73"
+  },
+  "payment": "COD",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c893e31a046122a001fa27"
+  },
+  "winner": false,
+  "certificate": false,
+  "request": "",
+  "student": {
+    "$oid": "60be37a69bcd52292829499b"
+  },
+  "event": {
+    "$oid": "60be4521edd3db0ed0268a22"
+  },
+  "payment": "",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c893eb1a046122a001fa28"
+  },
+  "winner": false,
+  "certificate": false,
+  "request": "",
+  "student": {
+    "$oid": "60be37a69bcd52292829499b"
+  },
+  "event": {
+    "$oid": "60be3ff03aa4561b00d1f1c3"
+  },
+  "payment": "",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c894901a046122a001fa2a"
+  },
+  "winner": false,
+  "certificate": false,
+  "request": "",
+  "student": {
+    "$oid": "60be37e19bcd52292829499c"
+  },
+  "event": {
+    "$oid": "60bb24995d8ea4188ca7bd27"
+  },
+  "payment": "ONLINE",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8949e1a046122a001fa2b"
+  },
+  "winner": false,
+  "certificate": false,
+  "request": "",
+  "student": {
+    "$oid": "60be37e19bcd52292829499c"
+  },
+  "event": {
+    "$oid": "60be41c73aa4561b00d1f1c6"
+  },
+  "payment": "ONLINE",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c894a21a046122a001fa2c"
+  },
+  "winner": false,
+  "certificate": false,
+  "request": "",
+  "student": {
+    "$oid": "60be37e19bcd52292829499c"
+  },
+  "event": {
+    "$oid": "60be43e88e5a7b13a8ae14a6"
+  },
+  "payment": "",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c894c41a046122a001fa2d"
+  },
+  "winner": false,
+  "certificate": false,
+  "request": "",
+  "student": {
+    "$oid": "60be37f69bcd52292829499d"
+  },
+  "event": {
+    "$oid": "60be43e88e5a7b13a8ae14a6"
+  },
+  "payment": "",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c894ca1a046122a001fa2e"
+  },
+  "winner": false,
+  "certificate": false,
+  "request": "",
+  "student": {
+    "$oid": "60be37f69bcd52292829499d"
+  },
+  "event": {
+    "$oid": "60be3ff03aa4561b00d1f1c3"
+  },
+  "payment": "",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c894f71a046122a001fa2f"
+  },
+  "winner": false,
+  "certificate": false,
+  "request": "",
+  "student": {
+    "$oid": "60be381f9bcd52292829499e"
+  },
+  "event": {
+    "$oid": "60bb24995d8ea4188ca7bd27"
+  },
+  "payment": "COD",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c894fb1a046122a001fa30"
+  },
+  "winner": false,
+  "certificate": true,
+  "request": "",
+  "student": {
+    "$oid": "60be381f9bcd52292829499e"
+  },
+  "event": {
+    "$oid": "60bb24245d8ea4188ca7bd26"
+  },
+  "payment": "COD",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c895021a046122a001fa31"
+  },
+  "winner": false,
+  "certificate": false,
+  "request": "",
+  "student": {
+    "$oid": "60be381f9bcd52292829499e"
+  },
+  "event": {
+    "$oid": "60bb435b309419034c5b462e"
+  },
+  "payment": "",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c895071a046122a001fa32"
+  },
+  "winner": false,
+  "certificate": false,
+  "request": "",
+  "student": {
+    "$oid": "60be381f9bcd52292829499e"
+  },
+  "event": {
+    "$oid": "60be3ff03aa4561b00d1f1c3"
+  },
+  "payment": "",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c895451a046122a001fa33"
+  },
+  "winner": false,
+  "certificate": false,
+  "request": "",
+  "student": {
+    "$oid": "60be38429bcd52292829499f"
+  },
+  "event": {
+    "$oid": "60bb24995d8ea4188ca7bd27"
+  },
+  "payment": "COD",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8954a1a046122a001fa34"
+  },
+  "winner": false,
+  "certificate": false,
+  "request": "",
+  "student": {
+    "$oid": "60be38429bcd52292829499f"
+  },
+  "event": {
+    "$oid": "60bb435b309419034c5b462e"
+  },
+  "payment": "",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c895521a046122a001fa35"
+  },
+  "winner": false,
+  "certificate": false,
+  "request": "",
+  "student": {
+    "$oid": "60be38429bcd52292829499f"
+  },
+  "event": {
+    "$oid": "60be457aedd3db0ed0268a23"
+  },
+  "payment": "",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c895781a046122a001fa36"
+  },
+  "winner": false,
+  "certificate": false,
+  "request": "",
+  "student": {
+    "$oid": "60be38639bcd5229282949a0"
+  },
+  "event": {
+    "$oid": "60be43e88e5a7b13a8ae14a6"
+  },
+  "payment": "",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8957e1a046122a001fa37"
+  },
+  "winner": false,
+  "certificate": false,
+  "request": "",
+  "student": {
+    "$oid": "60be38639bcd5229282949a0"
+  },
+  "event": {
+    "$oid": "60be457aedd3db0ed0268a23"
+  },
+  "payment": "",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c895851a046122a001fa38"
+  },
+  "winner": false,
+  "certificate": false,
+  "request": "",
+  "student": {
+    "$oid": "60be38639bcd5229282949a0"
+  },
+  "event": {
+    "$oid": "60be4521edd3db0ed0268a22"
+  },
+  "payment": "",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8958f1a046122a001fa39"
+  },
+  "winner": false,
+  "certificate": false,
+  "request": "",
+  "student": {
+    "$oid": "60be38639bcd5229282949a0"
+  },
+  "event": {
+    "$oid": "60be45ecedd3db0ed0268a24"
+  },
+  "payment": "COD",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c895a51a046122a001fa3a"
+  },
+  "winner": false,
+  "certificate": false,
+  "request": "",
+  "student": {
+    "$oid": "60be387b9bcd5229282949a1"
+  },
+  "event": {
+    "$oid": "60be457aedd3db0ed0268a23"
+  },
+  "payment": "",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c895aa1a046122a001fa3b"
+  },
+  "winner": false,
+  "certificate": false,
+  "request": "",
+  "student": {
+    "$oid": "60be387b9bcd5229282949a1"
+  },
+  "event": {
+    "$oid": "60c4624c3be55523c05d31fb"
+  },
+  "payment": "COD",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c895b01a046122a001fa3c"
+  },
+  "winner": false,
+  "certificate": true,
+  "request": "",
+  "student": {
+    "$oid": "60be387b9bcd5229282949a1"
+  },
+  "event": {
+    "$oid": "60bb24245d8ea4188ca7bd26"
+  },
+  "payment": "COD",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c895c31a046122a001fa3d"
+  },
+  "winner": false,
+  "certificate": true,
+  "request": "",
+  "student": {
+    "$oid": "60be38ae9bcd5229282949a2"
+  },
+  "event": {
+    "$oid": "60bb24245d8ea4188ca7bd26"
+  },
+  "payment": "COD",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c895c71a046122a001fa3e"
+  },
+  "winner": false,
+  "certificate": false,
+  "request": "",
+  "student": {
+    "$oid": "60be38ae9bcd5229282949a2"
+  },
+  "event": {
+    "$oid": "60bb435b309419034c5b462e"
+  },
+  "payment": "",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c895cd1a046122a001fa3f"
+  },
+  "winner": false,
+  "certificate": false,
+  "request": "",
+  "student": {
+    "$oid": "60be38ae9bcd5229282949a2"
+  },
+  "event": {
+    "$oid": "60c62759c3ac110a04405e73"
+  },
+  "payment": "COD",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c895ef1a046122a001fa40"
+  },
+  "winner": false,
+  "certificate": true,
+  "request": "",
+  "student": {
+    "$oid": "60be38cf9bcd5229282949a3"
+  },
+  "event": {
+    "$oid": "60bdb6eaa569e61ea88352a9"
+  },
+  "payment": "COD",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c895f31a046122a001fa41"
+  },
+  "winner": false,
+  "certificate": false,
+  "request": "",
+  "student": {
+    "$oid": "60be38cf9bcd5229282949a3"
+  },
+  "event": {
+    "$oid": "60bb24995d8ea4188ca7bd27"
+  },
+  "payment": "COD",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c895f71a046122a001fa42"
+  },
+  "winner": false,
+  "certificate": false,
+  "request": "",
+  "student": {
+    "$oid": "60be38cf9bcd5229282949a3"
+  },
+  "event": {
+    "$oid": "60bb435b309419034c5b462e"
+  },
+  "payment": "",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c896001a046122a001fa43"
+  },
+  "winner": false,
+  "certificate": false,
+  "request": "",
+  "student": {
+    "$oid": "60be38cf9bcd5229282949a3"
+  },
+  "event": {
+    "$oid": "60c62759c3ac110a04405e73"
+  },
+  "payment": "COD",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8963c1a046122a001fa44"
+  },
+  "winner": false,
+  "certificate": false,
+  "request": "",
+  "student": {
+    "$oid": "60be38e59bcd5229282949a4"
+  },
+  "event": {
+    "$oid": "60bb435b309419034c5b462e"
+  },
+  "payment": "",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8964a1a046122a001fa45"
+  },
+  "winner": false,
+  "certificate": false,
+  "request": "",
+  "student": {
+    "$oid": "60be38e59bcd5229282949a4"
+  },
+  "event": {
+    "$oid": "60be457aedd3db0ed0268a23"
+  },
+  "payment": "",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8965a1a046122a001fa46"
+  },
+  "winner": false,
+  "certificate": false,
+  "request": "",
+  "student": {
+    "$oid": "60be38e59bcd5229282949a4"
+  },
+  "event": {
+    "$oid": "60be4521edd3db0ed0268a22"
+  },
+  "payment": "",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c896701a046122a001fa47"
+  },
+  "winner": false,
+  "certificate": false,
+  "request": "",
+  "student": {
+    "$oid": "60be38fe9bcd5229282949a5"
+  },
+  "event": {
+    "$oid": "60be457aedd3db0ed0268a23"
+  },
+  "payment": "",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c896771a046122a001fa48"
+  },
+  "winner": false,
+  "certificate": false,
+  "request": "",
+  "student": {
+    "$oid": "60be38fe9bcd5229282949a5"
+  },
+  "event": {
+    "$oid": "60be4521edd3db0ed0268a22"
+  },
+  "payment": "",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8967f1a046122a001fa49"
+  },
+  "winner": false,
+  "certificate": false,
+  "request": "",
+  "student": {
+    "$oid": "60be38fe9bcd5229282949a5"
+  },
+  "event": {
+    "$oid": "60bb24995d8ea4188ca7bd27"
+  },
+  "payment": "COD",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c896911a046122a001fa4a"
+  },
+  "winner": false,
+  "certificate": false,
+  "request": "",
+  "student": {
+    "$oid": "60be39209bcd5229282949a7"
+  },
+  "event": {
+    "$oid": "60bb435b309419034c5b462e"
+  },
+  "payment": "",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8969b1a046122a001fa4b"
+  },
+  "winner": false,
+  "certificate": false,
+  "request": "",
+  "student": {
+    "$oid": "60be39209bcd5229282949a7"
+  },
+  "event": {
+    "$oid": "60be45ecedd3db0ed0268a24"
+  },
+  "payment": "COD",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c89cd6b1b8f20104d74d19"
+  },
+  "winner": false,
+  "certificate": false,
+  "request": "",
+  "student": {
+    "$oid": "60be38ae9bcd5229282949a2"
+  },
+  "event": {
+    "$oid": "60be3ff03aa4561b00d1f1c3"
+  },
+  "payment": "",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8d6f77166b601e0da1590"
+  },
+  "winner": false,
+  "certificate": false,
+  "request": "",
+  "student": {
+    "$oid": "60c06a38d271871fb87f768b"
+  },
+  "event": {
+    "$oid": "60be3c46adad7711840dbe80"
+  },
+  "payment": "COD",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8d7027166b601e0da1591"
+  },
+  "winner": false,
+  "certificate": false,
+  "request": "",
+  "student": {
+    "$oid": "60c06a38d271871fb87f768b"
+  },
+  "event": {
+    "$oid": "60be43e88e5a7b13a8ae14a6"
+  },
+  "payment": "",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c8d7dc7166b601e0da1594"
+  },
+  "winner": false,
+  "certificate": false,
+  "request": "",
+  "student": {
+    "$oid": "60c06a38d271871fb87f768b"
+  },
+  "event": {
+    "$oid": "60be457aedd3db0ed0268a23"
+  },
+  "payment": "",
+  "__v": 0
+}]

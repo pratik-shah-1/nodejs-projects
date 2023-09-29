@@ -1,0 +1,24 @@
+// -------------------PORTFOLIO-RIGHT-------------------
+.portfolio-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.portfolio-slider{
+    width:600px;
+    background-color: transparent;
+    margin-bottom:20px;
+    .swiper-slide{
+        height:320px;
+        overflow: hidden;
+    }
+}
+
+.portfolio-btns{
+    display: flex;
+    justify-content: center;
+    a{
+        margin:0 19px;
+    }
+}

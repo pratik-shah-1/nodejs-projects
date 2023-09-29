@@ -1,0 +1,36 @@
+.form-control:focus,
+.btn:focus,
+.form-select:focus,
+.btn-outline:focus,
+.navbar-toggler{
+    box-shadow: none !important;
+}
+
+.my-form{
+    width:350px;
+    overflow: hidden;
+}
+
+.neumorphism{
+    box-shadow: 4px 4px 10px $neumorphism,
+               -4px -4px 10px $neumorphism;
+}
+
+@media screen and (max-width:576px) {
+    .my-form{
+        width:calc(100% - 48px);
+    }    
+}
+
+
+.admin-form-container{
+    width:500px;
+    margin:50px auto;
+    overflow: hidden;
+}
+
+@media screen and (max-width:576px) {
+    .admin-form-container{
+        width:calc(100% - 40px);
+    }    
+}

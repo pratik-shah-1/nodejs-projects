@@ -1,0 +1,55 @@
+[{
+  "_id": {
+    "$oid": "60ae0e6d89bf6d3808d1735a"
+  },
+  "name": "Technical",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60ae0e7589bf6d3808d1735b"
+  },
+  "name": "Non-Technical",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60ae0e8289bf6d3808d1735c"
+  },
+  "name": "Sports",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60ae0e8a89bf6d3808d1735d"
+  },
+  "name": "Cultural",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60ae0ec089bf6d3808d1735e"
+  },
+  "name": "Workshop",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60ae0eda89bf6d3808d17360"
+  },
+  "name": "Leadership",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60ae0ee389bf6d3808d17361"
+  },
+  "name": "Management",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60ae0ef989bf6d3808d17362"
+  },
+  "name": "Social",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60c0ab5d6e5a381af49b4b49"
+  },
+  "name": "Club",
+  "__v": 0
+}]

@@ -1,0 +1,110 @@
+$html_color:#dd4b25;
+$css_color:#254bdd;
+$sass_color:#c66595;
+$bootstrap_color:#7b11f3;
+$js_color:#efd81d;
+$jquery_color:#0865a7;
+$react_color:#5ed3f3;
+$redux_color:#7248b6;
+$node_color:#659a60;
+$php_color:#4d588e;
+$laravel_color:#f72c1f;
+$mysql_color:#075269;
+$mongodb_color:#3f9b38;
+
+// -------------------------TECH_ICONS----------------
+.html-btn,
+.css-btn,
+.sass-btn,
+.bootstrap-btn,
+.js-btn,
+.jquery-btn,
+.react-btn,
+.redux-btn,
+.php-btn,
+.node-btn,
+.laravel-btn,
+.mysql-btn,
+.mongodb-btn{
+    i{
+        font-size: 34px;
+    }
+}
+
+.html-btn{
+    i{
+        color:$html_color;
+    }
+}
+
+.css-btn{
+    i{
+        color:$css_color;
+    }
+}
+
+.sass-btn{
+    i{
+        color:$sass_color;
+    }
+}
+
+.bootstrap-btn{
+    i{
+        color:$bootstrap_color;
+    }
+}
+
+.js-btn{
+    i{
+        color:$js_color;
+    }
+}
+
+.jquery-btn{
+    i{
+        color:$jquery_color;
+    }
+}
+
+.react-btn{
+    i{
+        color:$react_color;
+    }
+}
+
+.redux-btn{
+    i{
+        color:$redux_color;
+    }
+}
+
+.node-btn{
+    i{
+        color:$node_color;
+    }
+}
+
+.php-btn{
+    i{
+        color:$php_color;
+    }
+}
+
+.laravel-btn{
+    i{
+        color:$laravel_color;
+    }
+}
+
+.mysql-btn{
+    i{
+        color:$mysql_color;
+    }
+}
+
+.mongodb-btn{
+    i{
+        color:$mongodb_color;
+    }
+}

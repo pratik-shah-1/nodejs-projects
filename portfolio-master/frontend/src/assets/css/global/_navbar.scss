@@ -1,0 +1,39 @@
+.website-navbar{
+    width:1536px;
+    margin:0 auto;
+    padding-left: $side_double_xl;
+    padding-right: $side_double_xl;
+    padding-top:30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: $navbar_z;
+}
+
+.logo{
+    a{
+        font-size: 32px;
+        font-weight: bold;
+        color: $secondary;
+    }
+}
+
+.nav-menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    a{
+        margin:0 16px;
+        height: 32px;
+        line-height: 32px;
+        font-weight: 500;
+        color: $primary;
+        &:last-of-type{
+            margin-right: 0;
+        }
+    }
+}
+
+.navbar-active-link{
+    color:$secondary !important; 
+}

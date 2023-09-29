@@ -1,0 +1,74 @@
+<div class="d-flex flex-column flex-sm-row align-items-center justify-content-center justify-content-sm-end py-3">
+	<button class="btn btn-primary mb-3 mb-sm-0 mr-sm-5" onclick="excel()">
+		<span class="h6 m-0 text-uppercase">Export as Excel</span>
+	</button>
+	<input class="mr-sm-5 form-control" type="text" placeholder="Search by Event" name="filter" style="width:250px;">	
+</div>
+
+<script>
+	function excel(){
+	    $("#joined_events").table2excel({
+	        filename: "Joined Events.xls",
+	    });		
+	}
+</script>
+
+{{#if events}}
+<div class="table-responsive">
+	<table class="table table-striped" id="joined_events">
+		<thead class="thead-dark">
+			<tr>
+				<th class="h6 text-uppercase">Index</th>
+				<th class="h6 text-uppercase">Event Name</th>
+				<th class="h6 text-uppercase">Location</th>
+				<th class="h6 text-uppercase">Time</th>
+				<th class="h6 text-uppercase">Start Date</th>
+				<th class="h6 text-uppercase">End Date</th>
+				<th class="h6 text-uppercase">View</th>
+				<th class="h6 text-uppercase">Request Status</th>
+			</tr>
+		</thead>
+		<tbody>
+			{{#each events}}
+				<tr>
+					<td class="h5 font-weight-normal text-capitalize">{{index @index}}</td>
+					<td class="h5 font-weight-normal text-capitalize">
+						<p class="text-truncate" style="width:200px !important">{{this.event.name}}</p>
+					</td>
+					<td class="h5 font-weight-normal text-capitalize">{{this.event.location}}</td>
+					<td class="h5 font-weight-normal">{{this.event.start_time}} - {{this.event.end_time}}</td>
+					<td class="h5 font-weight-normal">{{this.event.start_date}}</td>
+					<td class="h5 font-weight-normal">{{this.event.end_date}}</td>
+					<td class="h5 font-weight-normal">
+						<a href="event/{{this.event.slug}}"class="btn btn-warning">
+							<span class="h6">VIEW</span>
+						</a>
+					</td>
+					<td>
+						{{#if this.accepted}}
+							<a href="/other_volunteers/{{this.event.slug}}" class="btn btn-primary">
+								<span class="h6">MEMBER</span>
+							</a>
+						{{else if this.rejected}}
+							<button class="btn btn-danger" disabled><span class="h6">REJECTED</span></button>
+						{{else if this.pending}}
+							<button class="btn btn-warning" disabled><span class="h6">PENDING</span></button>
+						{{/if}}
+					</td>
+				</tr>
+			{{/each}}
+		</tbody>
+	</table>
+</div>
+{{else}}
+<p class="display-4 mt-5 text-center">You haven't request in any event yet</p>
+{{/if}}
+
+<script>
+	$('[name="filter"]').keyup(function(){
+		var value = $(this).val().toLowerCase();
+	    $("tbody tr").filter(function() {
+	      	$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+	    });
+	});
+</script>
